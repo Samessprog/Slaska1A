@@ -26,7 +26,27 @@ nav {
             &:hover::after {
                 width: 100%;
             }
-            
+
+        }
+    }
+
+    .hamburger-menu {
+        cursor: pointer;
+
+        &:hover {
+            .hamburger-item {
+                transition: all ease-in-out .2s;
+                background-color: rgb(86, 86, 86);
+            }
+        }
+
+        .hamburger-item {
+            height: 4px;
+            width: 35px;
+            background-color: black;
+            border-radius: 2px;
+            margin-top: 4px;
+
         }
     }
 }

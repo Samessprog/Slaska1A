@@ -33,12 +33,21 @@ const Navbar = () => {
   return (
     <nav className="flex justify-center">
       <div className="flex justify-between items-center navbar-holder w-full">
-        <div className="w-4/12">
+        <div className="w-3/12 order-2">
           <a>
             <img src={logoIcon} />
           </a>
         </div>
-        <div className="flex w-6/12 justify-start ">
+
+        <div className="hamburger-menu md:hidden order-1">
+          <ul>
+            <li className="hamburger-item"></li>
+            <li className="hamburger-item"></li>
+            <li className="hamburger-item"></li>
+          </ul>
+        </div>
+
+        <div className="w-7/12 justify-start hidden md:flex order-2">
           <ul className="flex justify-around w-full text-md font-semibold cursor-pointer menu-item-list ">
             <li className="list-item relative">O firmie</li>
             <li className="list-item relative">Oferta produktów</li>
@@ -47,7 +56,7 @@ const Navbar = () => {
             <li className="list-item relative">Allegro</li>
           </ul>
         </div>
-        <div className="w-2/12">
+        <div className="w-2/12 order-3 ">
           <div
             className="relative inline-block text-left"
             ref={dropDownMenuLang}

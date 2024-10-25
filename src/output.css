@@ -566,6 +566,18 @@ video {
   right: 0px;
 }
 
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
 .-mr-1 {
   margin-right: -0.25rem;
 }
@@ -628,6 +640,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-3\/12 {
+  width: 25%;
+}
+
+.w-7\/12 {
+  width: 58.333333%;
 }
 
 .origin-top-right {
@@ -764,8 +784,12 @@ video {
   outline-offset: 2px;
 }
 
-@media (min-width: 1024px) {
-  .lg\:hidden {
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:hidden {
     display: none;
   }
 }
