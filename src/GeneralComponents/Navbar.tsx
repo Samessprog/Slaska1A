@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logoIcon from "../assets/logo.png";
 
 const Navbar = () => {
@@ -7,10 +7,28 @@ const Navbar = () => {
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
-  const changeLanguage = (language) => {
+  const changeLanguage = (language): void => {
     setSelectedLanguage(language);
-    setIsOpen(false); // Zamknij dropdown po wybraniu języka
+    setIsOpen(false);
   };
+
+  const dropDownMenuLang = useRef();
+
+  const handleClickOutside = (event): void => {
+    if (
+      dropDownMenuLang.current &&
+      !dropDownMenuLang.current.contains(event.target)
+    ) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="flex justify-center">
@@ -20,7 +38,7 @@ const Navbar = () => {
             <img src={logoIcon} />
           </a>
         </div>
-        <div className="flex w-6/12 justify-start">
+        <div className="flex w-6/12 justify-start ">
           <ul className="flex justify-around w-full text-md font-semibold cursor-pointer menu-item-list ">
             <li className="list-item relative">O firmie</li>
             <li className="list-item relative">Oferta produktów</li>
@@ -30,7 +48,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="w-2/12">
-          <div className="relative inline-block text-left">
+          <div
+            className="relative inline-block text-left"
+            ref={dropDownMenuLang}
+          >
             <div>
               <button
                 type="button"
@@ -58,7 +79,7 @@ const Navbar = () => {
             {isOpen && (
               <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                 <div
-                  className="py-1"
+                  className="py-1 w-full flex flex-col "
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="options-menu"

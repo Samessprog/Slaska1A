@@ -598,6 +598,10 @@ video {
   display: list-item;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-5 {
   height: 1.25rem;
 }
@@ -632,6 +636,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -754,4 +762,10 @@ video {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+@media (min-width: 1024px) {
+  .lg\:hidden {
+    display: none;
+  }
 }
