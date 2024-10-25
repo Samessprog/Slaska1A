@@ -64,14 +64,42 @@ const Navbar = () => {
             isOpenHamburger ? "menu-drop-open" : "hidden"
           } `}
         >
-          <ul className="flex justify-around w-full text-md font-semibold cursor-pointer menu-item-list ">
-            <li className="list-item relative">
+          <ul className="flex justify-around w-full text-md font-semibold cursor-pointer menu-item-list items-center">
+            <li
+              className={`list-item relative ${
+                isOpenHamburger ? "w-11/12" : ""
+              }`}
+            >
               <Link>O firmie</Link>
             </li>
-            <li className="list-item relative">Oferta produktów</li>
-            <li className="list-item relative">Kontakt</li>
-            <li className="list-item relative ">Katalogi</li>
-            <li className="list-item relative">Allegro</li>
+            <li
+              className={`list-item relative ${
+                isOpenHamburger ? "w-11/12" : ""
+              }`}
+            >
+              <Link>Oferta produktów</Link>
+            </li>
+            <li
+              className={`list-item relative ${
+                isOpenHamburger ? "w-11/12" : ""
+              }`}
+            >
+              <Link>Kontakt</Link>
+            </li>
+            <li
+              className={`list-item relative ${
+                isOpenHamburger ? "w-11/12" : ""
+              }`}
+            >
+              <Link>Katalogi</Link>
+            </li>
+            <li
+              className={`list-item relative ${
+                isOpenHamburger ? "w-11/12" : ""
+              }`}
+            >
+              <Link>Allegro</Link>
+            </li>
           </ul>
         </div>
 
