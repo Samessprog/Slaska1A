@@ -51,7 +51,7 @@ nav {
         &.open {
 
             .hamburger-item {
-                transition: all ease-in-out .2s;
+                transition: all ease-in-out .3s;
 
                 &:first-child {
                     transform: translateY(8px) rotate(45deg);
@@ -69,7 +69,7 @@ nav {
 
         &.close {
             .hamburger-item {
-                transition: all ease-in-out .2s;
+                transition: all ease-in-out .3s;
 
                 &:first-child {
                     transform: translateY(0px) rotate(0deg);
@@ -87,4 +87,34 @@ nav {
         }
 
     }
+
+    .menu-drop-open {
+        display: block !important;
+        position: absolute;
+        top: 22%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(246, 246, 246);
+        width: 100%;
+
+        .menu-item-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .list-item {
+            margin-top: 10px;
+            margin-bottom: 5px;
+
+
+            &:hover::after {
+                width: 0%;
+            }
+
+            &:hover {
+                background-color: red;
+            }
+        }
+    }
+
 }

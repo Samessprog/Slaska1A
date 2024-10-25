@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import logoIcon from "../assets/logo.png";
 
 const Navbar = () => {
@@ -40,9 +41,9 @@ const Navbar = () => {
     <nav className="flex justify-center">
       <div className="flex justify-between items-center navbar-holder w-full">
         <div className="w-3/12 order-2">
-          <a>
+          <Link>
             <img src={logoIcon} />
-          </a>
+          </Link>
         </div>
 
         <div
@@ -58,15 +59,22 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="w-7/12 justify-start hidden md:flex order-2">
+        <div
+          className={`w-7/12 justify-start md:flex order-2 ${
+            isOpenHamburger ? "menu-drop-open" : "hidden"
+          } `}
+        >
           <ul className="flex justify-around w-full text-md font-semibold cursor-pointer menu-item-list ">
-            <li className="list-item relative">O firmie</li>
+            <li className="list-item relative">
+              <Link>O firmie</Link>
+            </li>
             <li className="list-item relative">Oferta produktów</li>
             <li className="list-item relative">Kontakt</li>
-            <li className="list-item relative">Katalogi</li>
+            <li className="list-item relative ">Katalogi</li>
             <li className="list-item relative">Allegro</li>
           </ul>
         </div>
+
         <div className="w-2/12 order-3 ">
           <div
             className="relative inline-block text-left"
