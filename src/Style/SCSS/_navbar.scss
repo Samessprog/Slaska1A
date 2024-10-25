@@ -46,7 +46,45 @@ nav {
             background-color: black;
             border-radius: 2px;
             margin-top: 4px;
+        }
+
+        &.open {
+
+            .hamburger-item {
+                transition: all ease-in-out .2s;
+
+                &:first-child {
+                    transform: translateY(8px) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:last-child {
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+            }
+        }
+
+        &.close {
+            .hamburger-item {
+                transition: all ease-in-out .2s;
+
+                &:first-child {
+                    transform: translateY(0px) rotate(0deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 100%;
+                }
+
+                &:last-child {
+                    transform: translateY(0) rotate(0);
+                }
+            }
 
         }
+
     }
 }

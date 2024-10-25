@@ -2,19 +2,21 @@ import React, { useEffect, useRef, useState } from "react";
 import logoIcon from "../assets/logo.png";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("Pol");
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("Pol");
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
-  const changeLanguage = (language): void => {
+  const changeLanguage = (language: string): void => {
     setSelectedLanguage(language);
     setIsOpen(false);
   };
 
   const dropDownMenuLang = useRef();
 
-  const handleClickOutside = (event): void => {
+  const handleClickOutside = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
     if (
       dropDownMenuLang.current &&
       !dropDownMenuLang.current.contains(event.target)
@@ -30,6 +32,10 @@ const Navbar = () => {
     };
   }, []);
 
+  const [isOpenHamburger, setIsOpenHamburger] = useState<boolean>(false);
+
+  console.log(isOpenHamburger);
+
   return (
     <nav className="flex justify-center">
       <div className="flex justify-between items-center navbar-holder w-full">
@@ -39,10 +45,15 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="hamburger-menu md:hidden order-1">
+        <div
+          className={`hamburger-menu md:hidden order-1  ${
+            isOpenHamburger ? "open" : "close"
+          }`}
+          onClick={() => setIsOpenHamburger(!isOpenHamburger)}
+        >
           <ul>
             <li className="hamburger-item"></li>
-            <li className="hamburger-item"></li>
+            <li className={`hamburger-item `}></li>
             <li className="hamburger-item"></li>
           </ul>
         </div>
