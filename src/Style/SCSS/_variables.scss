@@ -1,0 +1,31 @@
+@mixin list-item-navbar-helper {
+
+    .list-item {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        padding: 5px;
+        transition: all ease-in-out .3s;
+
+        &:hover {
+            background-color: rgb(235, 235, 235);
+            border-radius: 20px;
+        }
+
+        &:hover::after {
+            width: 0%;
+        }
+
+    }
+}
+
+//to Tailwind refactor
+@mixin animation-navbar-helper {
+    z-index: -1;
+    display: block;
+    position: absolute;
+    left: 50%;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-bottom: 1px solid rgb(232, 232, 232);
+    transform: translate(-50%, -50%);
+}

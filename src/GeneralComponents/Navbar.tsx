@@ -35,8 +35,6 @@ const Navbar = () => {
 
   const [isOpenHamburger, setIsOpenHamburger] = useState<boolean>(false);
 
-  console.log(isOpenHamburger);
-
   return (
     <nav className="flex justify-center">
       <div className="flex justify-between items-center navbar-holder w-full">
@@ -61,10 +59,10 @@ const Navbar = () => {
 
         <div
           className={`w-7/12 justify-start md:flex order-2 ${
-            isOpenHamburger ? "menu-drop-open" : "hidden"
-          } `}
+            isOpenHamburger ? "menu-drop-open openAnimate" : "menu-drop-close"
+          }`}
         >
-          <ul className="flex justify-around w-full text-md font-semibold cursor-pointer menu-item-list items-center">
+          <ul className="flex justify-around w-full text-md font-semibold cursor-pointer menu-item-list items-center flex-col md:flex-row">
             <li
               className={`list-item relative ${
                 isOpenHamburger ? "w-11/12" : ""

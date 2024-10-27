@@ -1,9 +1,12 @@
+@import './variables';
+
 nav {
     border-bottom: 1px solid rgb(220, 220, 220);
+    background-color: white;
+    z-index: 10;
 }
 
 .navbar-holder {
-
     padding-left: 1rem;
     padding-top: .5rem;
     padding-right: 1rem;
@@ -90,41 +93,36 @@ nav {
     }
 
     .menu-drop-open {
-
-        display: block !important;
-        position: absolute;
-        top: 27%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgb(255, 255, 255);
-        width: 100%;
-        border-bottom: 1px solid rgb(232, 232, 232);
-
-        .menu-item-list {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .list-item {
-            margin-top: 10px;
-            margin-bottom: 5px;
-            padding: 5px;
-
-            transition: all ease-in-out .3s;
-
-            &:hover {
-                background-color: rgb(235, 235, 235);
-                border-radius: 20px;
-
-            }
-
-
-
-            &:hover::after {
-                width: 0%;
-            }
-
-        }
+        animation: openNavbarAnimation 1s 1 forwards;
+        @include animation-navbar-helper;
+        @include list-item-navbar-helper;
     }
 
+    .menu-drop-close {
+        animation: closeNavbarAnimation 1s forwards;
+        @include animation-navbar-helper;
+        @include list-item-navbar-helper;
+    }
+}
+
+@keyframes openNavbarAnimation {
+    from {
+        top: -8%;
+    }
+
+    to {
+        top: 27%;
+    }
+}
+
+@keyframes closeNavbarAnimation {
+    0% {
+        top: 27%;
+        visibility: visible;
+    }
+
+    100% {
+        top: -10%;
+        visibility: hidden;
+    }
 }
