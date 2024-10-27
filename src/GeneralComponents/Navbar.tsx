@@ -33,6 +33,13 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
   };
 
   useEffect(() => {
+    if (currentWindowWith > 768) {
+      setIsClicked(false);
+      setIsOpenHamburger(false);
+    }
+  }, [currentWindowWith]);
+
+  useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
