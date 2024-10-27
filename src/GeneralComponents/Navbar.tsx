@@ -2,9 +2,15 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import logoIcon from "../assets/logo.png";
 
-const Navbar = () => {
+interface NavbarProps {
+  currentWindowWith: number;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selectedLanguage, setSelectedLanguage] = useState<string>("Pol");
+  const [isOpenHamburger, setIsOpenHamburger] = useState<boolean>(false);
+  const [isClicked, setIsClicked] = useState<boolean>(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
@@ -33,8 +39,6 @@ const Navbar = () => {
     };
   }, []);
 
-  const [isOpenHamburger, setIsOpenHamburger] = useState<boolean>(false);
-
   return (
     <nav className="flex justify-center">
       <div className="flex justify-between items-center navbar-holder w-full">
@@ -48,18 +52,27 @@ const Navbar = () => {
           className={`hamburger-menu md:hidden order-1  ${
             isOpenHamburger ? "open" : "close"
           }`}
-          onClick={() => setIsOpenHamburger(!isOpenHamburger)}
+          onClick={() => {
+            setIsOpenHamburger(!isOpenHamburger);
+            setIsClicked(true);
+          }}
         >
           <ul>
             <li className="hamburger-item"></li>
-            <li className={`hamburger-item `}></li>
+            <li className={`hamburger-item`}></li>
             <li className="hamburger-item"></li>
           </ul>
         </div>
 
         <div
           className={`w-7/12 justify-start md:flex order-2 ${
-            isOpenHamburger ? "menu-drop-open openAnimate" : "menu-drop-close"
+            currentWindowWith > 768
+              ? ""
+              : isOpenHamburger
+              ? "menu-drop-open openAnimate"
+              : isClicked
+              ? "menu-drop-close"
+              : "hidden"
           }`}
         >
           <ul className="flex justify-around w-full text-md font-semibold cursor-pointer menu-item-list items-center flex-col md:flex-row">
