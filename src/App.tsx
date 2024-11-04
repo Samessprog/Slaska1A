@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./GeneralComponents/Navbar";
+import Footer from "./GeneralComponents/Footer";
 
 function App() {
   let [currentWindowWith, setCurrentWindowWith] = useState<number>(
@@ -22,6 +23,8 @@ function App() {
   return (
     <>
       <Navbar currentWindowWith={currentWindowWith} />
+
+      <Footer />
     </>
   );
 }
