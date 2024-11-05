@@ -1,16 +1,40 @@
-.footer-holder{
+.footer-holder {
     border-top: 1px solid white;
     background-color: rgb(22, 22, 22);
     color: white;
 
 
-    .privacy-holder{
+    .privacy-holder {
         border-top: solid rgb(110, 110, 110) 1px;
         background-color: rgb(18, 18, 18);
     }
-    .img-logo-holder{
+
+    .img-logo-holder {
         height: 150px;
         width: 80%;
-        
+
     }
+
+    .footer-icon-border {
+        border: 1px solid #AAAAB1;
+        padding: .6rem;
+        transition: all ease-in-out 300ms;
+
+        &:hover {
+            border: 1px solid white;
+            background-color: #222222;
+        }
+    }
+
+    .footer-icon-holder:hover .footer-icon {
+        transition: all ease-in-out 300ms;
+        fill: white;
+    }
+
+    .allegro-icon {
+        &:hover {
+            filter: drop-shadow(1px 3px 3px rgb(43, 43, 43)); 
+        }
+    }
+
 }

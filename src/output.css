@@ -586,6 +586,10 @@ video {
   margin-bottom: 0.25rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -606,6 +610,10 @@ video {
   margin-right: 0.5rem;
 }
 
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -624,6 +632,10 @@ video {
 
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .block {
@@ -654,6 +666,10 @@ video {
   height: 1.25rem;
 }
 
+.h-\[45px\] {
+  height: 45px;
+}
+
 .h-full {
   height: 100%;
 }
@@ -680,6 +696,10 @@ video {
 
 .w-7\/12 {
   width: 58.333333%;
+}
+
+.w-\[130px\] {
+  width: 130px;
 }
 
 .w-full {
@@ -752,8 +772,12 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.fill-\[\#ff0000\] {
-  fill: #ff0000;
+.fill-\[\#AAAAB1\] {
+  fill: #AAAAB1;
+}
+
+.fill-\[\#ffffff\] {
+  fill: #ffffff;
 }
 
 .px-4 {
@@ -775,12 +799,16 @@ video {
   padding-bottom: 1.25rem;
 }
 
-.pl-10 {
-  padding-left: 2.5rem;
+.pl-5 {
+  padding-left: 1.25rem;
 }
 
-.pr-10 {
-  padding-right: 2.5rem;
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .pt-5 {
@@ -896,6 +924,39 @@ video {
   outline-offset: 2px;
 }
 
+@media (min-width: 640px) {
+  .sm\:h-\[90px\] {
+    height: 90px;
+  }
+
+  .sm\:w-\[200px\] {
+    width: 200px;
+  }
+
+  .sm\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
+  .sm\:pr-10 {
+    padding-right: 2.5rem;
+  }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
@@ -907,6 +968,11 @@ video {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -921,7 +987,45 @@ video {
     margin-top: 0.25rem;
   }
 
+  .xl\:h-\[45px\] {
+    height: 45px;
+  }
+
+  .xl\:w-2\/12 {
+    width: 16.666667%;
+  }
+
+  .xl\:w-3\/12 {
+    width: 25%;
+  }
+
+  .xl\:w-\[130px\] {
+    width: 130px;
+  }
+
+  .xl\:flex-row {
+    flex-direction: row;
+  }
+
   .xl\:items-start {
     align-items: flex-start;
+  }
+
+  .xl\:pt-0 {
+    padding-top: 0px;
+  }
+
+  .xl\:pt-10 {
+    padding-top: 2.5rem;
+  }
+
+  .xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .xl\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
