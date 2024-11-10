@@ -558,6 +558,10 @@ video {
   visibility: visible;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -568,6 +572,10 @@ video {
 
 .right-0 {
   right: 0px;
+}
+
+.bottom-\[10\%\] {
+  bottom: 10%;
 }
 
 .order-1 {
