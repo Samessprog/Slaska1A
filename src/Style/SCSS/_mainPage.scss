@@ -1,0 +1,52 @@
+.arrow-up-page {
+    z-index: 999;
+    position: fixed;
+    right: 0%;
+    bottom: 10%;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 0);
+    transition: all ease-in-out 2s;
+
+    &:hover {
+        background-color: rgb(249, 37, 37);
+        transform: translateY(-7px);
+
+        .arrow-icon {
+            animation: arrow-up-animation 2s infinite;
+        }
+    }
+
+    .arrow-icon {
+        fill: rgb(255, 255, 255);
+    }
+}
+
+.visible {
+    animation: opacityArrow .2s linear;
+}
+
+@keyframes opacityArrow {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes arrow-up-animation {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
