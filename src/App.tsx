@@ -3,7 +3,7 @@ import "./App.css";
 import Navbar from "./GeneralComponents/Navbar";
 import Footer from "./GeneralComponents/Footer";
 import Main from "./Pages/Mian";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 
 function App() {
   let [currentWindowWith, setCurrentWindowWith] = useState<number>(
@@ -49,32 +49,12 @@ function App() {
   return (
     <>
       <Navbar currentWindowWith={currentWindowWith} />
-      <Main />
+
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
       <div className="flex flex-col">
         {" "}
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
-        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
         Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
         Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
         Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
@@ -169,7 +149,9 @@ function App() {
         <Link
           to="#"
           onClick={scrollToTop}
-          className={`arrow-up-page mr-5 fixed right-0 ${isVisible ? "visible" : "none"}`}
+          className={`arrow-up-page mr-5 fixed right-0 ${
+            isVisible ? "visible" : "none"
+          }`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -50,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
     <nav className="flex justify-center">
       <div className="flex justify-between items-center navbar-holder w-full">
         <div className="w-3/12 order-2">
-          <Link>
+          <Link to="/">
             <img src={logoIcon} />
           </Link>
         </div>
