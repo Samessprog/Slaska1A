@@ -11,7 +11,7 @@ function App() {
   );
 
   useEffect(() => {
-    const handleResize = () => {
+    const handleResize = (): void => {
       setCurrentWindowWith(window.innerWidth);
     };
 
@@ -22,16 +22,16 @@ function App() {
     };
   }, []);
 
-  const scrollToTop = () => {
+  const scrollToTop = (): void => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
-  const handleScroll = () => {
+  const handleScroll = (): void => {
     if (window.scrollY > 1) {
       setIsVisible(true);
     } else {
@@ -169,13 +169,13 @@ function App() {
         <Link
           to="#"
           onClick={scrollToTop}
-          className={`arrow-up-page mr-5  ${isVisible ? "visible" : "none"}`}
+          className={`arrow-up-page mr-5 fixed right-0 ${isVisible ? "visible" : "none"}`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            height="50px"
+            height="40px"
             viewBox="0 -960 960 960"
-            width="50px"
+            width="40px"
             fill="undefined"
             className="arrow-icon"
           >
