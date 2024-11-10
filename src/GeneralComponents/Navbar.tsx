@@ -82,7 +82,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
               : "hidden"
           }`}
         >
-          <ul className="flex justify-around w-full text-md font-semibold cursor-pointer menu-item-list items-center flex-col md:flex-row">
+          <ul className="flex justify-around w-full text-sm font-semibold cursor-pointer menu-item-list items-center flex-col md:flex-row">
             <li
               className={`list-item relative ${
                 isOpenHamburger ? "w-11/12" : ""
