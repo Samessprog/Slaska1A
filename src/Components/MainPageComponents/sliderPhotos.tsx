@@ -11,7 +11,6 @@ const SliderPhotos: React.FC<SliderPhotosInterface> = ({ elm }) => {
         src={elm}
         alt="loading img err"
         className="w-full h-full object-cove t"
-        className="w-full h-full object-cover"
       />
     </div>
   );
