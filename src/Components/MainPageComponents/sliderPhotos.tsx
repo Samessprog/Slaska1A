@@ -4,6 +4,7 @@ interface SliderPhotosInterface {
   elm: string;
 }
 
+
 const SliderPhotos: React.FC<SliderPhotosInterface> = ({ elm }) => {
   return (
     <div className="ml-3 mr-3">
