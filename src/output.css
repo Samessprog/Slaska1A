@@ -646,6 +646,22 @@ video {
   margin-top: 1rem;
 }
 
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
 .block {
   display: block;
 }
@@ -712,6 +728,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-1\/12 {
+  width: 8.333333%;
 }
 
 .origin-top-right {
@@ -786,6 +806,11 @@ video {
 
 .fill-\[\#ffffff\] {
   fill: #ffffff;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .px-4 {
@@ -981,11 +1006,6 @@ video {
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 
   .md\:text-base {
