@@ -9,4 +9,29 @@
 
 .slick-dots li.slick-active button:before {
     color: #ff6347 !important;
+ MainPage
+}
+
+.slick-slide {
+    cursor: grab;
+}
+
+.slick-slide:active {
+    cursor: grabbing;
+}
+
+.test {
+    @media (max-width: 768px) {
+        height: 300px;
+    }
+
+    .t {
+
+
+        @media (max-width: 768px) {
+            height: 300px;
+        }
+    }
+=======
+ master
 }
