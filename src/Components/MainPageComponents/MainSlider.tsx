@@ -32,8 +32,13 @@ const MainSlider: React.FC = () => {
   };
 
   return (
+ MainPage
     <section className="flex justify-center w-full mb-10 test ">
       <div className=" justify-center w-full ">
+
+    <section className="flex justify-center w-full mb-10">
+      <div className=" justify-center w-full">
+ master
         <div className="slider-container">
           <Slider {...settings}>
             {photosArr.map((elm, key) => (
