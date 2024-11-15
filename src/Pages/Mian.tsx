@@ -7,6 +7,7 @@ const Main: React.FC = () => {
     <>
       <MainSlider />
       <ProductMain />
+
       <section className="mt-10 w-full pl-5 pr-5">
         <div className="mb-10">
           <h2 className="text-3xl font-semibold">Znajdz nas</h2>
@@ -20,6 +21,7 @@ const Main: React.FC = () => {
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </section>
+
     </>
   );
 };
