@@ -1,4 +1,5 @@
 import React from "react";
+import ProductCard from "./ProductCard";
 
 import test from "../../assets/4ikonanew2.webp";
 
@@ -9,6 +10,18 @@ const ProductMain: React.FC = () => {
         <h2>Zapoznaj się z naszymi produktamia</h2>
       </div>
       <div className="w-full flex flex-wrap pl-2 pr-2 justify-center mt-10">
+
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+
         <div className="product-container w-2/12 p-6 flex items-center ml-2 mr-2 mb-3">
           <img src={test} alt="loading err" />
           <div className="text-lg ml-3">Kołki szybkiego montażu</div>
@@ -49,6 +62,7 @@ const ProductMain: React.FC = () => {
           <img src={test} alt="loading err" />
           <div className="text-lg ml-3">Kołki szybkiego montażu</div>
         </div>
+
       </div>
     </section>
   );
