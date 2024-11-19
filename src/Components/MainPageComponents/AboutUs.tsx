@@ -1,26 +1,45 @@
 import React from "react";
-import t from "../../assets/mbank-slide — kopia.jpg";
+import t from "../../../../Zuzu/viteGroomer/src/assets/DALL·E 2024-10-30 19.49.17 - A realistic, square image of a dog grooming service scene for a pet grooming website. It shows a groomer carefully trimming and brushing a happy, rela.webp";
 
 const AboutUS = () => {
   return (
-    <section className="w-full flex pl-5 pr-5 mt-20">
-      <div className="w-6/12">
-        <img src={t} alt="loading err" />
+    <section className="w-full flex pl-5 pr-5 mt-20 t flex-col">
+      <div className="text-3xl font font-semibold mb-5">
+        {" "}
+        <h2> Poznaj na</h2>
       </div>
-      <div className="w-6/12 text-wrap text-justify pr-10">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis
-        magna at velit porta, vitae tempor enim interdum. Cras dignissim
-        accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum nunc. Nam
-        ante elit, tincidunt viverra quam rhoncus, fermentum volutpat eros.
-        Pellentesque eget dolor eget lorem mattis tempus sed nec felis. Duis a
-        placerat magna. Proin mollis at eros sit amet semper. Sed hendrerit
-        lacus est. Aenean dui libero, consequat a quam sed, consequat
-        sollicitudin justo. Vestibulum eros justo, porttitor id eros ut, euismod
-        aliquet tortor. Suspendisse ut tincidunt enim. Donec mollis cursus
-        scelerisque. Proin euismod imperdiet elementum. Ut pulvinar magna quis
-        sollicitudin justo. Vestibulum eros justo, porttitor id eros ut, euismod
-        aliquet tortor. Suspendisse ut tincidunt enim. Donec mollis cursus
-        scelerisque. Proin euismod imperdiet elementum. Ut pulvinar magna quis
+      <div className="text-center text-sm text-about w-full flex justify-center">
+        <div className="w-5/12 text-about">
+          accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum nunc.
+          Nam ante elit, tincidunt viverra quam rhoncus, fermentum volutpat
+          eros.
+        </div>
+      </div>
+      <div className="mt-20 w-full flex relative ">
+        <div className="text-justify about-us-holder-content p-8 w-5/12 a">
+          <h3 className="mb-5 text-2xl">Jesteśmy tu by poagać! Zapoznaj się z nami</h3>
+          <p className="mb-5 text-about">
+            accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum nunc.
+            Nam ante elit, tincidunt viverra quam rhoncus, fermentum volutpat
+            eros.accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum
+            nunc. Nam ante elit, tincidunt viverra quam rhoncus, fermentum
+          </p>
+          <p className="mb-5 text-about ">
+            accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum nunc.
+            Nam ante elit, tincidunt viverra quam rhoncus, fermentum volutpat
+            eros.accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum
+            nunc. Nam ante elit, tincidunt viverra quam rhoncus, fermentum
+          </p>
+          <p className="text-about ">
+            accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum nunc.
+            Nam ante elit, tincidunt viverra quam rhoncus, fermentum volutpat
+            eros.accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum
+            nunc. Nam ante elit, tincidunt viverra quam rhoncus, fermentum
+          </p>
+        </div>
+        <div className="w-5/12 about-us-img-holder">
+          <img src={t} alt="loading error" />
+        </div>
       </div>
     </section>
   );
