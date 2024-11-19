@@ -1,0 +1,31 @@
+.text-about {
+    color: rgb(72, 72, 72);
+}
+
+.about-us-holder-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: -4px -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.t {
+    height: 1000px;
+
+}
+
+.a {
+    position: absolute;
+    right: 48%;
+    margin-top: 1rem;
+}
+
+.about-us-img-holder {
+    position: absolute;
+    right: 10%;
+    background-color: aqua;
+    object-fit: fill;
+    box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.1);
+    transform: rotateY(10deg);
+
+}
