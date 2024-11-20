@@ -2,6 +2,7 @@ import React from "react";
 import MainSlider from "../Components/MainPageComponents/MainSlider";
 import ProductMain from "../Components/MainPageComponents/ProductMain";
 import AboutUS from "../Components/MainPageComponents/AboutUs";
+import Brands from "../Components/MainPageComponents/Brands";
 
 const Main: React.FC = () => {
   return (
@@ -9,10 +10,8 @@ const Main: React.FC = () => {
       <MainSlider />
       <AboutUS />
       <ProductMain />
-
-      ZAPEŁNIACZ Z MARKAMI statystyki (wykres)
-=======
-
+      <Brands />
+      statystyki (wykres)
       <section className="mt-10 w-full pl-5 pr-5">
         <div className="mb-10">
           <h2 className="text-3xl font-semibold">Znajdz nas</h2>
@@ -26,7 +25,6 @@ const Main: React.FC = () => {
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </section>
-
     </>
   );
 };
