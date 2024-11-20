@@ -1,48 +1,43 @@
 import React from "react";
-import t from "../../assets/0logo1.png";
 import Slider from "react-slick";
+import BrandContext from "./BrandContext";
+
+interface BrandInterface {
+  dots: boolean;
+  infinite: boolean;
+  speed: number;
+  slidesToShow: number;
+  slidesToScroll: number;
+  autoplay: boolean;
+  autoplaySpeed: number;
+  cssEase: string;
+  pauseOnHover: boolean;
+}
 
 const Brands: React.FC = () => {
-  const settings = {
+  const settings: BrandInterface = {
     dots: false,
     infinite: true,
-    speed: 15000, 
+    speed: 15000,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
-    cssEase: "linear", 
-    pauseOnHover: false, 
+    cssEase: "linear",
+    pauseOnHover: false,
   };
 
   return (
     <section className="mt-20">
-      <div className="brand-container">
+      <div className=" pl-4 pr-4">
         <Slider {...settings}>
-          <div className="brand-holder">
-            <img src={t} alt="loading error" className="brand-img" />
-          </div>
-          <div className="brand-holder">
-            <img src={t} alt="loading error" className="brand-img" />
-          </div>
-          <div className="brand-holder">
-            <img src={t} alt="loading error" className="brand-img" />
-          </div>
-          <div className="brand-holder">
-            <img src={t} alt="loading error" className="brand-img" />
-          </div>
-          <div className="brand-holder">
-            <img src={t} alt="loading error" className="brand-img" />
-          </div>
-          <div className="brand-holder">
-            <img src={t} alt="loading error" className="brand-img" />
-          </div>
-          <div className="brand-holder">
-            <img src={t} alt="loading error" className="brand-img" />
-          </div>
-          <div className="brand-holder">
-            <img src={t} alt="loading error" className="brand-img" />
-          </div>
+          <BrandContext />
+          <BrandContext />
+          <BrandContext />
+          <BrandContext />
+          <BrandContext />
+          <BrandContext />
+          <BrandContext />
         </Slider>
       </div>
     </section>

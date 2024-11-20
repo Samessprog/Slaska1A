@@ -1,31 +1,22 @@
-.brand-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
+.brand-holder {
+    border: 2px solid rgb(216, 216, 216);
+    display: flex !important;
+    justify-content: center !important;
+    padding-left: 2rem !important;
+    width: 90% !important;
+    transition: all ease-in-out .2s;
 
-    .brand-holder {
-        border: 2px solid rgb(216, 216, 216);
-        border-radius: 5px;
-        display: flex !important;
-        justify-content: center !important;
-        padding-left: 2rem !important;
-        width: 90% !important;
+    .brand-img {
         transition: all ease-in-out .2s;
-        cursor: pointer;
-
-        .brand-img {
-            transition: all ease-in-out .2s;
-            filter: grayscale(100%);
-        }
-
-        &:hover {
-            background-color: rgb(246, 246, 246);
-            border: 2px solid rgb(135, 135, 135);
-
-            .brand-img {
-                filter: none;
-            }
-        }
+        filter: grayscale(100%);
     }
 
+    &:hover {
+        background-color: rgb(246, 246, 246);
+        border: 2px solid rgb(135, 135, 135);
 
+        .brand-img {
+            filter: none;
+        }
+    }
 }
