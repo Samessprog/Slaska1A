@@ -5,12 +5,23 @@ import test from "../../assets/4ikonanew2.webp";
 
 const ProductMain: React.FC = () => {
   return (
-    <section className="pt-10">
-      <div className="text-3xl font-semibold ">
-        <h2>Zapoznaj się z naszymi produktamia</h2>
+    <section className="">
+      <div className="text-3xl font-semibold flex w-full justify-center items-center">
+        <h2 className="mr-3">
+          {" "}
+          <em>Zapoznaj się z naszymi produktamia</em>{" "}
+        </h2>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="35px"
+          viewBox="0 -960 960 960"
+          width="35px"
+          fill="undefined"
+        >
+          <path d="M620-163 450-333l56-56 114 114 226-226 56 56-282 282Zm220-397h-80v-200h-80v120H280v-120h-80v560h240v80H200q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h167q11-35 43-57.5t70-22.5q40 0 71.5 22.5T594-840h166q33 0 56.5 23.5T840-760v200ZM480-760q17 0 28.5-11.5T520-800q0-17-11.5-28.5T480-840q-17 0-28.5 11.5T440-800q0 17 11.5 28.5T480-760Z" />
+        </svg>
       </div>
       <div className="w-full flex flex-wrap pl-2 pr-2 justify-center mt-10">
-
         <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
         <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
         <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
@@ -21,48 +32,12 @@ const ProductMain: React.FC = () => {
         <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
         <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
         <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-
-        <div className="product-container w-2/12 p-6 flex items-center ml-2 mr-2 mb-3">
-          <img src={test} alt="loading err" />
-          <div className="text-lg ml-3">Kołki szybkiego montażu</div>
-        </div>
-        <div className="product-container w-2/12 p-6 flex items-center ml-2 mr-2 mb-3">
-          <img src={test} alt="loading err" />
-          <div className="text-lg ml-3">Kołki szybkiego montażu</div>
-        </div>
-        <div className="product-container w-2/12 p-6 flex items-center ml-2 mr-2 mb-3">
-          <img src={test} alt="loading err" />
-          <div className="text-lg ml-3">Kołki szybkiego montażu</div>
-        </div>
-        <div className="product-container w-2/12 p-6 flex items-center ml-2 mr-2 mb-3">
-          <img src={test} alt="loading err" />
-          <div className="text-lg ml-3">Kołki szybkiego montażu</div>
-        </div>
-        <div className="product-container w-2/12 p-6 flex items-center ml-2 mr-2 mb-3">
-          <img src={test} alt="loading err" />
-          <div className="text-lg ml-3">Kołki szybkiego montażu</div>
-        </div>
-        <div className="product-container w-2/12 p-6 flex items-center ml-2 mr-2 mb-3">
-          <img src={test} alt="loading err" />
-          <div className="text-lg ml-3">Kołki szybkiego montażu</div>
-        </div>
-        <div className="product-container w-2/12 p-6 flex items-center ml-2 mr-2 mb-3">
-          <img src={test} alt="loading err" />
-          <div className="text-lg ml-3">Kołki szybkiego montażu</div>
-        </div>
-        <div className="product-container w-2/12 p-6 flex items-center ml-2 mr-2 mb-3">
-          <img src={test} alt="loading err" />
-          <div className="text-lg ml-3">Kołki szybkiego montażu</div>
-        </div>
-        <div className="product-container w-2/12 p-6 flex items-center ml-2 mr-2 mb-3">
-          <img src={test} alt="loading err" />
-          <div className="text-lg ml-3">Kołki szybkiego montażu</div>
-        </div>
-        <div className="product-container w-2/12 p-6 flex items-center ml-2 mr-2 mb-3">
-          <img src={test} alt="loading err" />
-          <div className="text-lg ml-3">Kołki szybkiego montażu</div>
-        </div>
-
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
       </div>
     </section>
   );

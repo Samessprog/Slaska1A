@@ -32,7 +32,6 @@
 }
 
 .product-container {
-    position: relative;
     background-image: linear-gradient(45deg, #fc6045, #e62c0b);
     color: white;
     border-radius: 30px 10px 30px 10px;
@@ -44,26 +43,10 @@
     &:hover {
         transform: translateY(-8px);
         background-image: linear-gradient(45deg, #ff2600, #e62c0b);
-    }
-
-    &:hover::before {
-        animation: moveLine 1.5s forwards;
-    }
+        box-shadow: 10px 10px 15px 0px rgb(95, 95, 95);
+    }   
 }
 
-.product-container::before {
-    content: ' ';
-    transform: rotateZ(-50deg);
-    position: absolute;
-    top: 0;
-    left: -30%;
-    height: 100%;
-    width: 2px;
-    background-color: rgb(255, 255, 255);
-    transition: all 0.3s ease-in-out;
-    opacity: 70%;
-    filter: blur(5px);
-}
 
 @keyframes moveLine {
     0% {
