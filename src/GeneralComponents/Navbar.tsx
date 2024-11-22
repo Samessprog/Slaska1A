@@ -47,7 +47,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
   }, []);
 
   return (
-    <nav className="flex justify-center">
+    <nav className="flex justify-center testt ">
       <div className="flex justify-between items-center navbar-holder w-full">
         <div className="w-3/12 order-2">
           <Link to="/">
@@ -72,7 +72,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
         </div>
 
         <div
-          className={`w-7/12 justify-start md:flex order-2 ${
+          className={`w-7/12 justify-start md:flex order-2 z-50 ${
             currentWindowWith > 768
               ? ""
               : isOpenHamburger
