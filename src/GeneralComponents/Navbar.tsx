@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, HashLink } from "react-router-dom";
 import logoIcon from "../assets/logo.png";
 
 interface NavbarProps {
@@ -47,7 +47,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
   }, []);
 
   return (
-    <nav className="flex justify-center">
+    <nav className="flex justify-center testt ">
       <div className="flex justify-between items-center navbar-holder w-full">
         <div className="w-3/12 order-2">
           <Link to="/">
@@ -72,7 +72,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
         </div>
 
         <div
-          className={`w-7/12 justify-start md:flex order-2 ${
+          className={`w-7/12 justify-start md:flex order-2 z-50 ${
             currentWindowWith > 768
               ? ""
               : isOpenHamburger
@@ -88,35 +88,58 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
                 isOpenHamburger ? "w-11/12" : ""
               }`}
             >
-              <Link>O firmie</Link>
+              <a className="scroll-smooth" href="#productContext">
+                Oferta produktów
+              </a>
             </li>
             <li
               className={`list-item relative ${
                 isOpenHamburger ? "w-11/12" : ""
               }`}
             >
-              <Link>Oferta produktów</Link>
+              <Link to="https://slaska1a.pl/" target="_blank">
+                Sklep
+              </Link>
             </li>
             <li
               className={`list-item relative ${
                 isOpenHamburger ? "w-11/12" : ""
               }`}
             >
-              <Link>Kontakt</Link>
+              <Link
+                to="https://allegro.pl/uzytkownik/Elektrokoncept"
+                target="_blank"
+              >
+                Allegro
+              </Link>
+            </li>
+            <li
+              className={`list-item relative  ${
+                isOpenHamburger ? "w-11/12" : ""
+              }`}
+            >
+              <a className="scroll-smooth" href="#aboutUs">
+                O firmie
+              </a>
             </li>
             <li
               className={`list-item relative ${
                 isOpenHamburger ? "w-11/12" : ""
               }`}
             >
-              <Link>Katalogi</Link>
+              <a href="#footer">Kontakt</a>
             </li>
             <li
               className={`list-item relative ${
                 isOpenHamburger ? "w-11/12" : ""
               }`}
             >
-              <Link>Allegro</Link>
+              <Link
+                to="https://slaska1a.pl/pl/i/Regulamin-sklepu/18"
+                target="_blank"
+              >
+                Regulamin
+              </Link>
             </li>
           </ul>
         </div>

@@ -2,13 +2,12 @@
 
 nav {
     border-bottom: 1px solid rgb(220, 220, 220);
-    background-color: white;
-    z-index: 10;
-    position: sticky;
+    background-color: rgb(255, 255, 255);
     top: 0;
     left: 0;
     opacity: 97%;
-    z-index: 999;
+    position: sticky;
+    z-index: 998;
 }
 
 .navbar-holder {
@@ -17,7 +16,7 @@ nav {
     padding-right: 1rem;
     padding-bottom: .5rem;
     max-width: 1200px;
-
+    background-color: white;
 
     .menu-item-list {
         .list-item {
@@ -25,11 +24,12 @@ nav {
                 content: '';
                 position: absolute;
                 left: 0;
-                bottom: -20%;
+                bottom: -10%;
                 width: 0;
                 height: 2px;
-                background-color: red;
                 transition: width .30s ease-in-out;
+                background-color: red;
+                border-radius: 20px;
             }
 
             &:hover::after {
@@ -112,22 +112,22 @@ nav {
 
 @keyframes openNavbarAnimation {
     from {
-        top: -8%;
+        top: -150%;
     }
 
     to {
-        top: 37%;
+        top: 260%;
     }
 }
 
 @keyframes closeNavbarAnimation {
     0% {
-        top: 27%;
+        top: 260%;
         visibility: visible;
     }
 
     100% {
-        top: -10%;
+        top: -150%;
         visibility: hidden;
     }
 }

@@ -5,7 +5,7 @@ import test from "../../assets/4ikonanew2.webp";
 
 const ProductMain: React.FC = () => {
   return (
-    <section className="">
+    <section className="" id="productContext">
       <div className="text-3xl font-semibold flex w-full justify-center items-center">
         <h2 className="mr-3">
           {" "}

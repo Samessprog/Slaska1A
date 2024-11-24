@@ -3,7 +3,7 @@ import t from "../../../../Zuzu/viteGroomer/src/assets/DALL·E 2024-10-30 19.49.
 
 const AboutUS = () => {
   return (
-    <section className="w-full flex pl-5 pr-5 mt-20 t flex-col">
+    <section className="w-full flex pl-5 pr-5 mt-20 t flex-col" id="aboutUs">
       <div className="text-3xl font font-semibold mb-5">
         {" "}
         <h2> Poznaj na</h2>
