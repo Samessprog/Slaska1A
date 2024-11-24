@@ -4,7 +4,7 @@ import footerLogo from "../assets/logoFooter.png";
 
 const Footer = () => {
   return (
-    <footer className="footer-holder w-full mt-20">
+    <footer className="footer-holder w-full mt-20" id="footer">
       <div className="xl:pt-10">
         <div className="pb-5 pt-5 flex w-full pl-5 pr-5 sm:pl-10 sm:pr-10 mb-5 flex-col xl:flex-row">
           <div className="flex flex-col text-[#AAAAB1] items-center xl:items-start xl:w-3/12 ">
@@ -54,27 +54,53 @@ const Footer = () => {
             </div>
             <ul className="text-sm text-[#AAAAB1]">
               <li className="mt-2">
-                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm sm:xs-md xl:text-xs">
-                  O firmie
-                </Link>
-              </li>
-              <li className="mt-2">
-                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm sm:xs-md xl:text-xsm">
+                <a
+                  href="#productContext"
+                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm sm:xs-md xl:text-xs"
+                >
                   Oferta produktów
+                </a>
+              </li>
+              <li className="mt-2">
+                <Link
+                  to="https://slaska1a.pl/"
+                  target="_blank"
+                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm sm:xs-md xl:text-xs"
+                >
+                  Sklep
                 </Link>
               </li>
               <li className="mt-2">
-                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm sm:xs-md xl:text-xs">
+                <Link
+                  to="https://allegro.pl/uzytkownik/Elektrokoncept"
+                  target="_blank"
+                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm sm:xs-md xl:text-xs"
+                >
+                  Allego
+                </Link>
+              </li>
+              <li className="mt-2">
+                <a
+                  href="#aboutUs"
+                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 sm:xs-md xl:text-xs"
+                >
+                  O nas
+                </a>
+              </li>
+              <li className="mt-2">
+                <a
+                  href="#footer"
+                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 sm:xs-md xl:text-xs"
+                >
                   Kontakt
-                </Link>
+                </a>
               </li>
               <li className="mt-2">
-                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 sm:xs-md xl:text-xs">
-                  Katalogi
-                </Link>
-              </li>
-              <li className="mt-2">
-                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 sm:xs-md xl:text-xs">
+                <Link
+                  to="https://allegro.pl/uzytkownik/Elektrokoncept"
+                  target="_blank"
+                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 sm:xs-md xl:text-xs"
+                >
                   Allegro
                 </Link>
               </li>

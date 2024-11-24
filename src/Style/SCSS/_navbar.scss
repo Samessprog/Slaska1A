@@ -7,7 +7,7 @@ nav {
     left: 0;
     opacity: 97%;
     position: sticky;
-    z-index: 999;
+    z-index: 998;
 }
 
 .navbar-holder {
@@ -16,19 +16,20 @@ nav {
     padding-right: 1rem;
     padding-bottom: .5rem;
     max-width: 1200px;
-    background-color: rgb(255, 255, 255);
-    
-    .menu-item-list {
+    background-color: white;
 
+    .menu-item-list {
         .list-item {
             &:after {
                 content: '';
                 position: absolute;
                 left: 0;
-                bottom: -20%;
+                bottom: -10%;
                 width: 0;
                 height: 2px;
                 transition: width .30s ease-in-out;
+                background-color: red;
+                border-radius: 20px;
             }
 
             &:hover::after {

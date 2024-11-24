@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, HashLink } from "react-router-dom";
 import logoIcon from "../assets/logo.png";
 
 interface NavbarProps {
@@ -88,35 +88,58 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
                 isOpenHamburger ? "w-11/12" : ""
               }`}
             >
-              <Link>O firmie</Link>
+              <a className="scroll-smooth" href="#productContext">
+                Oferta produktów
+              </a>
             </li>
             <li
               className={`list-item relative ${
                 isOpenHamburger ? "w-11/12" : ""
               }`}
             >
-              <Link>Oferta produktów</Link>
+              <Link to="https://slaska1a.pl/" target="_blank">
+                Sklep
+              </Link>
             </li>
             <li
               className={`list-item relative ${
                 isOpenHamburger ? "w-11/12" : ""
               }`}
             >
-              <Link>Kontakt</Link>
+              <Link
+                to="https://allegro.pl/uzytkownik/Elektrokoncept"
+                target="_blank"
+              >
+                Allegro
+              </Link>
+            </li>
+            <li
+              className={`list-item relative  ${
+                isOpenHamburger ? "w-11/12" : ""
+              }`}
+            >
+              <a className="scroll-smooth" href="#aboutUs">
+                O firmie
+              </a>
             </li>
             <li
               className={`list-item relative ${
                 isOpenHamburger ? "w-11/12" : ""
               }`}
             >
-              <Link>Katalogi</Link>
+              <a href="#footer">Kontakt</a>
             </li>
             <li
               className={`list-item relative ${
                 isOpenHamburger ? "w-11/12" : ""
               }`}
             >
-              <Link>Allegro</Link>
+              <Link
+                to="https://slaska1a.pl/pl/i/Regulamin-sklepu/18"
+                target="_blank"
+              >
+                Regulamin
+              </Link>
             </li>
           </ul>
         </div>
