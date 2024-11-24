@@ -3,6 +3,7 @@ import MainSlider from "../Components/MainPageComponents/MainSlider";
 import ProductMain from "../Components/MainPageComponents/ProductMain";
 import AboutUS from "../Components/MainPageComponents/AboutUs";
 import Brands from "../Components/MainPageComponents/Brands";
+import BarChart from "../Components/MainPageComponents/Chart";
 
 const Main: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const Main: React.FC = () => {
       <AboutUS />
       <ProductMain />
       <Brands />
-      statystyki (wykres)
+      <BarChart />
       <section className="mt-10 w-full pl-5 pr-5">
         <div className="mb-10 flex justify-center">
           <h2 className="text-3xl font-semibold">
