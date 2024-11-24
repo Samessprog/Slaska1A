@@ -4,6 +4,7 @@ import ProductMain from "../Components/MainPageComponents/ProductMain";
 import AboutUS from "../Components/MainPageComponents/AboutUs";
 import Brands from "../Components/MainPageComponents/Brands";
 import BarChart from "../Components/MainPageComponents/Chart";
+import Delivery from "../Components/MainPageComponents/Delivery";
 
 const Main: React.FC = () => {
   return (
@@ -38,6 +39,7 @@ const Main: React.FC = () => {
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </section>
+      <Delivery />
     </>
   );
 };

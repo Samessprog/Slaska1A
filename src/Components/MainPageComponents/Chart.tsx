@@ -37,7 +37,13 @@ const BarChart: React.FC = () => {
   return (
     <section className="mt-20 flex w-full ">
       <div className="flex w-6/12 justify-end ">
-        <Chart options={options} series={series} type="bar" width="600" height="430" />
+        <Chart
+          options={options}
+          series={series}
+          type="bar"
+          width="600"
+          height="430"
+        />
       </div>
       <div className="w-6/12 pl-10 flex flex-col items-start pr-20">
         <div className="text-xl font-semibold">Wykres zamówień RdR</div>
