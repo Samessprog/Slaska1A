@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, HashLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logoIcon from "../assets/logo.png";
 
 interface NavbarProps {
@@ -47,8 +47,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
   }, []);
 
   return (
-    <nav className="flex justify-center testt ">
-      <div className="flex justify-between items-center navbar-holder w-full">
+    <nav className="flex justify-center top-0 left-0 sticky">
+      <div className="flex justify-between items-center navbar-holder w-full pt-2 pl-4 pr-4 pb-2 bg-white">
         <div className="w-3/12 order-2">
           <Link to="/">
             <img src={logoIcon} />
@@ -65,9 +65,9 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
           }}
         >
           <ul>
-            <li className="hamburger-item"></li>
-            <li className={`hamburger-item`}></li>
-            <li className="hamburger-item"></li>
+            <li className="hamburger-item mt-1"></li>
+            <li className={`hamburger-item mt-1`}></li>
+            <li className="hamburger-item mt-1"></li>
           </ul>
         </div>
 

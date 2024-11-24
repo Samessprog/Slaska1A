@@ -3,41 +3,31 @@
 nav {
     border-bottom: 1px solid rgb(220, 220, 220);
     background-color: rgb(255, 255, 255);
-    top: 0;
-    left: 0;
     opacity: 97%;
-    position: sticky;
     z-index: 998;
 }
 
 .navbar-holder {
-    padding-left: 1rem;
-    padding-top: .5rem;
-    padding-right: 1rem;
-    padding-bottom: .5rem;
     max-width: 1200px;
-    background-color: white;
 
-    .menu-item-list {
-        .list-item {
-            &:after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -10%;
-                width: 0;
-                height: 2px;
-                transition: width .30s ease-in-out;
-                background-color: red;
-                border-radius: 20px;
-            }
+    .list-item {
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10%;
+            width: 0;
+            height: 2px;
+            transition: width .30s ease-in-out;
+            background-color: red;
+            border-radius: 20px;
+        }
 
-            &:hover::after {
-                width: 100%;
-            }
-
+        &:hover::after {
+            width: 100%;
         }
     }
+
 
     .hamburger-menu {
         cursor: pointer;
@@ -54,7 +44,6 @@ nav {
             width: 35px;
             background-color: black;
             border-radius: 2px;
-            margin-top: 4px;
         }
 
         &.open {
