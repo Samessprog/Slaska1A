@@ -7,6 +7,11 @@
 @import './ourBrands';
 @import './delivery';
 
+html,
+body {
+   overflow-x: hidden;
+}
+
 body {
    background-color: white;
    margin: 0 !important;
