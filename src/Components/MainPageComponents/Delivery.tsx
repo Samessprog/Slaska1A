@@ -1,7 +1,9 @@
 import React from "react";
-import DPD from "../../assets/DPD_logo_redgrad_rgb-1.webp";
-import poczta from "../../assets/poczta.png";
-import allegro from "../../assets/6lJEwSSohvBIIWNlJUU9sx-w1200-h1200.png";
+import DPDLogo from "../../assets/deliveryIcons/DPD.png";
+import pocztaLogo from "../../assets/deliveryIcons/poczta.png";
+import allegroLogo from "../../assets/deliveryIcons/6lJEwSSohvBIIWNlJUU9sx-w1200-h1200.png";
+import inpostLogo from "../../assets/deliveryIcons/Inpost.png";
+import orlenLogo from "../../assets/deliveryIcons/Orlen.png";
 
 const Delivery: React.FC = () => {
   return (
@@ -22,27 +24,31 @@ const Delivery: React.FC = () => {
       <div className="flex justify-around mt-10">
         <div className="delivery-icon w-2/12 flex justify-center pb-5 pt-5">
           <div className="w-6/12  ">
-            <img src={DPD} alt="Loading Err" className="w-full h-full ke" />
+            <img src={DPDLogo} alt="Loading Err" className="w-full h-full ke" />
           </div>
         </div>
         <div className="delivery-icon w-2/12 flex justify-center pb-5 pt-5">
           <div className="w-6/12 ">
-            <img src={poczta} alt="Loading Err" className="w-full h-full" />
+            <img src={pocztaLogo} alt="Loading Err" className="w-full h-full" />
           </div>
         </div>
         <div className="delivery-icon w-2/12 flex justify-center pb-5 pt-5">
           <div className="w-6/12 ">
-            <img src={allegro} alt="Loading Err" className="w-full h-full" />
+            <img
+              src={allegroLogo}
+              alt="Loading Err"
+              className="w-full h-full"
+            />
           </div>
         </div>
         <div className="delivery-icon w-2/12 flex justify-center pb-5 pt-5">
           <div className="w-6/12 ">
-            <img src={DPD} alt="Loading Err" className="w-full h-full" />
+            <img src={inpostLogo} alt="Loading Err" className="w-full h-full" />
           </div>
         </div>
         <div className="delivery-icon w-2/12 flex justify-center pb-5 pt-5">
           <div className="w-6/12 ">
-            <img src={DPD} alt="Loading Err" className="w-full h-full" />
+            <img src={orlenLogo} alt="Loading Err" className="w-full h-full" />
           </div>
         </div>
       </div>
