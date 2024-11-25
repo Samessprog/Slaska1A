@@ -9,8 +9,10 @@ nav {
 
 .navbar-holder {
     max-width: 1200px;
+    transition: all;
 
     .list-item {
+        transition: all ease-in-out .15s;
         &:after {
             content: '';
             position: absolute;
@@ -22,6 +24,7 @@ nav {
             background-color: red;
             border-radius: 20px;
         }
+
 
         &:hover::after {
             width: 100%;
