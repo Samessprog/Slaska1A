@@ -11,8 +11,8 @@ const AboutUS = () => {
 
   const styles = useSpring({
     opacity: inView ? 1 : 0,
-    transform: inView ? "translateX(0px)" : "translateX(-300px)",
-    config: { mass: 5, tension: 100, friction: 50 },
+    transform: inView ? "translateX(0px)" : "translateX(-200px)",
+    config: { mass: 5, tension: 100, friction: 55 },
   });
 
   return (
