@@ -24,11 +24,11 @@ const MainSlider: React.FC = () => {
   const settings: SliderSettings = {
     dots: true,
     infinite: true,
-    speed: 2000,
+    speed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5500,
+    autoplaySpeed: 6500,
   };
 
   return (
