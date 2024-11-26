@@ -1,7 +1,24 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 
-import test from "../../assets/4ikonanew2.webp";
+//products icons
+import KPRFAST from "../../assets/4ikonanew2.webp";
+import MocowanieTradycyjneLogo from "../../assets/productIcons/SystemInstalacyjny.webp";
+import MocowanieRamowe from "../../assets/productIcons/MocowaniaTradycyjne.webp";
+import MocowanieOscieznic from "../../assets/productIcons/Koszulki.webp";
+import DoDrewna from "../../assets/productIcons/Dodrewnawebp.webp";
+import Kotwy from "../../assets/productIcons/Kotwy.webp";
+import KotwyChemiczne from "../../assets/productIcons/KotwyCHemiczne.webp";
+import Gwozdzie from "../../assets/productIcons/Gwozdzie.webp";
+import Samowierty from "../../assets/productIcons/WkretySamoWierty.webp";
+import Dach from "../../assets/productIcons/Dachy.webp";
+import katowniki from "../../assets/productIcons/Katowniki.webp";
+import Goliat from "../../assets/productIcons/Goliat.webp";
+import LacznikiGwintowe from "../../assets/productIcons/LacznikiGwintowe.webp";
+import Blistry from "../../assets/productIcons/Blistry.webp";
+import Podkladki from "../../assets/productIcons/Podkladki.webp";
+import Nakredki from "../../assets/productIcons/Nakredki.webp";
+import konfirmaty from "../../assets/productIcons/Konfirmaty.webp";
 
 const ProductMain: React.FC = () => {
   return (
@@ -22,22 +39,25 @@ const ProductMain: React.FC = () => {
         </svg>
       </div>
       <div className="w-full flex flex-wrap pl-2 pr-2 justify-center mt-10">
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={test}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={KPRFAST}>Kołki szybkiego montażu</ProductCard>
+        <ProductCard img={MocowanieTradycyjneLogo}>
+          Mocowanie tradycyjne
+        </ProductCard>
+        <ProductCard img={MocowanieRamowe}>Mocowanie ramowe</ProductCard>
+        <ProductCard img={MocowanieOscieznic}>Mocowanie osnieznic</ProductCard>
+        <ProductCard img={DoDrewna}>Wkręty do drewna</ProductCard>
+        <ProductCard img={Kotwy}>Kotwy</ProductCard>
+        <ProductCard img={Gwozdzie}>Gwozdzie</ProductCard>
+        <ProductCard img={Samowierty}>Wkręty samowiercące</ProductCard>
+        <ProductCard img={Dach}>Wkręty do dachu</ProductCard>
+        <ProductCard img={katowniki}>Złącza ciesielskie</ProductCard>
+        <ProductCard img={Goliat}>System Goliat</ProductCard>
+        <ProductCard img={LacznikiGwintowe}>Łączniuki gwintowe</ProductCard>
+        <ProductCard img={Podkladki}>Podkładki</ProductCard>
+        <ProductCard img={Nakredki}>Nakrętki</ProductCard>
+        <ProductCard img={Blistry}>Blistry</ProductCard>
+        <ProductCard img={KotwyChemiczne}>Kotwy Chemiczne</ProductCard>
+        <ProductCard img={konfirmaty}>konfirmaty</ProductCard>
       </div>
     </section>
   );
