@@ -6,7 +6,7 @@ import Main from "./Pages/Mian";
 import { Link, Route, Routes } from "react-router-dom";
 
 function App() {
-  let [currentWindowWith, setCurrentWindowWith] = useState<number>(
+  const [currentWindowWith, setCurrentWindowWith] = useState<number>(
     window.innerWidth
   );
 
