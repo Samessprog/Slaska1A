@@ -20,7 +20,7 @@ const Delivery: React.FC = () => {
   });
 
   return (
-    <section className="mt-20 pl-12 pr-12">
+    <section className="mt-20 pl-12 pr-12 pb-20">
       <div
         className="text-3xl font-semibold flex w-full justify-center items-center"
         ref={ref}

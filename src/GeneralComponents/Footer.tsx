@@ -4,7 +4,7 @@ import footerLogo from "../assets/logoFooter.png";
 
 const Footer = () => {
   return (
-    <footer className="footer-holder w-full mt-20 text-white" id="footer">
+    <footer className="footer-holder w-full text-white" id="footer">
       <div className="xl:pt-10">
         <div className="pb-5 pt-5 flex w-full pl-5 pr-5 sm:pl-10 sm:pr-10 mb-5 flex-col xl:flex-row">
           <div className="flex flex-col text-[#AAAAB1] items-center xl:items-start xl:w-3/12 ">
