@@ -6,6 +6,7 @@ import inpostLogo from "../../assets/deliveryIcons/Inpost.png";
 import orlenLogo from "../../assets/deliveryIcons/Orlen.png";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
+import { Link } from "react-router-dom";
 
 const Delivery: React.FC = () => {
   const { ref, inView } = useInView({
@@ -38,17 +39,29 @@ const Delivery: React.FC = () => {
         </svg>
       </div>
       <animated.div className="flex justify-around mt-10" style={props}>
-        <div className="delivery-icon w-2/12 flex justify-center pb-5 pt-5">
+        <Link
+          className="delivery-icon w-2/12 flex justify-center pb-5 pt-5"
+          to="https://www.dpd.com/pl/pl/"
+          target="_blank"
+        >
           <div className="w-6/12  ">
             <img src={DPDLogo} alt="Loading Err" className="w-full h-full ke" />
           </div>
-        </div>
-        <div className="delivery-icon w-2/12 flex justify-center pb-5 pt-5">
+        </Link>
+        <Link
+          className="delivery-icon w-2/12 flex justify-center pb-5 pt-5"
+          to="https://www.poczta-polska.pl/"
+          target="_blank"
+        >
           <div className="w-6/12 ">
             <img src={pocztaLogo} alt="Loading Err" className="w-full h-full" />
           </div>
-        </div>
-        <div className="delivery-icon w-2/12 flex justify-center pb-5 pt-5">
+        </Link>
+        <Link
+          className="delivery-icon w-2/12 flex justify-center pb-5 pt-5"
+          to="https://allegro.pl/kampania/one/kurier"
+          target="_blank"
+        >
           <div className="w-6/12 ">
             <img
               src={allegroLogo}
@@ -56,17 +69,25 @@ const Delivery: React.FC = () => {
               className="w-full h-full"
             />
           </div>
-        </div>
-        <div className="delivery-icon w-2/12 flex justify-center pb-5 pt-5">
+        </Link>
+        <Link
+          className="delivery-icon w-2/12 flex justify-center pb-5 pt-5"
+          to="https://inpost.pl/"
+          target="_blank"
+        >
           <div className="w-6/12 ">
             <img src={inpostLogo} alt="Loading Err" className="w-full h-full" />
           </div>
-        </div>
-        <div className="delivery-icon w-2/12 flex justify-center pb-5 pt-5">
+        </Link>
+        <Link
+          className="delivery-icon w-2/12 flex justify-center pb-5 pt-5"
+          to="https://www.orlenpaczka.pl/automaty-paczkowe/"
+          target="_blank"
+        >
           <div className="w-6/12 ">
             <img src={orlenLogo} alt="Loading Err" className="w-full h-full" />
           </div>
-        </div>
+        </Link>
       </animated.div>
     </section>
   );
