@@ -13,6 +13,7 @@ nav {
 
     .list-item {
         transition: all ease-in-out .15s;
+
         &:after {
             content: '';
             position: absolute;

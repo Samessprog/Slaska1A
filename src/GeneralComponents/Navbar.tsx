@@ -138,7 +138,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
                 to="https://slaska1a.pl/pl/i/Regulamin-sklepu/18"
                 target="_blank"
               >
-                Regulamin
+                Katalog
               </Link>
             </li>
           </ul>
