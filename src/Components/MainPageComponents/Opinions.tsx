@@ -2,8 +2,18 @@ import React from "react";
 import Slider from "react-slick";
 import Rating from "@mui/material/Rating";
 
+interface Settings {
+  dots: boolean;
+  infinite: boolean;
+  autoplay: boolean;
+  speed: number;
+  autoplaySpeed: number;
+  slidesToShow: number;
+  slidesToScroll: number;
+}
+
 const Opinions: React.FC = () => {
-  const settings = {
+  const settings: Settings = {
     dots: false,
     infinite: true,
     autoplay: true,
