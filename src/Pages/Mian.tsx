@@ -6,6 +6,7 @@ import Brands from "../Components/MainPageComponents/Brands";
 import BarChart from "../Components/MainPageComponents/Chart";
 import Delivery from "../Components/MainPageComponents/Delivery";
 import Opinions from "../Components/MainPageComponents/Opinions";
+import Summary from "../Components/MainPageComponents/Summary";
 
 const Main: React.FC = () => {
   return (
@@ -43,6 +44,7 @@ const Main: React.FC = () => {
         </section>
         <Delivery />
       </div>
+      <Summary />
     </>
   );
 };
