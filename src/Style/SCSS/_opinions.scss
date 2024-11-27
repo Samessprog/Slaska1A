@@ -1,0 +1,26 @@
+.options-holder {
+
+    .slider-container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+
+        .slick-slide {
+            display: flex !important;
+            justify-content: center;
+
+        }
+
+        .slide {
+            padding: 20px;
+            border-radius: 20px;
+            border: 2px solid #bababa;
+            background-color: #f8f8f8b6;
+            box-shadow: 3px 3px 7px 1px rgba(185, 185, 185, 0.849);
+            margin-bottom: 1rem;
+            width: 90% !important;
+            color: rgb(47, 47, 47);
+        }
+    }
+
+}

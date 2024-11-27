@@ -6,6 +6,7 @@
 @import './aboutUs';
 @import './ourBrands';
 @import './delivery';
+@import './opinions';
 
 html,
 body {
@@ -24,4 +25,12 @@ body {
    padding: 0 !important;
    width: 100%;
    max-width: 100% !important;
+}
+
+.tests {
+   width: 100%;
+   background-image: url('../../assets/tloaszare2.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
 }
