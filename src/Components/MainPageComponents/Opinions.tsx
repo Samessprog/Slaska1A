@@ -12,6 +12,40 @@ interface Settings {
   slidesToScroll: number;
 }
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="100px"
+      viewBox="0 -960 960 960"
+      width="100px"
+      fill="undefined"
+      className={`a50w-50h ${className}`}
+      onClick={onClick}
+    >
+      <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+    </svg>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="24px"
+      viewBox="0 -960 960 960"
+      width="24px"
+      fill="undefined"
+      className={`a50w-50h   ${className}`}
+      onClick={onClick}
+    >
+      <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
+    </svg>
+  );
+}
+
 const Opinions: React.FC = () => {
   const settings: Settings = {
     dots: false,
@@ -20,7 +54,8 @@ const Opinions: React.FC = () => {
     speed: 5000,
     autoplaySpeed: 10000,
     slidesToShow: 2,
-    slidesToScroll: 2,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
   };
 
   return (
