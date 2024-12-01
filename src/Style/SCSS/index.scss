@@ -16,6 +16,16 @@ nav {
    z-index: 998;
 }
 
+.a50w-50h {
+   height: 50px !important;
+   width: 50px !important;
+   z-index: 10;
+   transition: all ease-in-out .3s;
+
+   &:hover {
+      fill: #ff6347;
+   }
+}
 
 html {
    @media (min-width: 1950px) {
