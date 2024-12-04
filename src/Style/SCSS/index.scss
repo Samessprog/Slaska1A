@@ -33,8 +33,9 @@ html {
       justify-content: center;
    }
 
-
+   overflow-x: hidden;
 }
+
 
 body {
    background-color: white;
@@ -42,6 +43,7 @@ body {
    padding: 0 !important;
    font-family: Arial, Helvetica, sans-serif;
    max-width: 1950px;
+   overflow-x: hidden;
 
 }
 
@@ -59,3 +61,4 @@ body {
    background-size: cover;
    background-attachment: fixed;
 }
+

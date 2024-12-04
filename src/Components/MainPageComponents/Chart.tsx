@@ -49,24 +49,24 @@ const BarChart: React.FC = () => {
   ];
 
   return (
-    <section className="mt-20 flex  overflow-hidden">
-      <div className="flex w-6/12 justify-end " ref={ref}>
+    <section className="mt-20 flex overflow-hidden flex-col lg:flex-row">
+      <div className="flex w-full lg:w-6/12 justify-center" ref={ref}>
         <Chart
           options={options}
           series={series}
           type="bar"
-          width="600"
+          width="500"
           height="430"
         />
       </div>
-      <div className="w-6/12 pl-10 flex flex-col items-start pr-20">
+      <div className="w-full lg:w-6/12 pl-5 lg:pl-10 flex flex-col items-start pr-5 lg:pr-20">
         <animated.div
           className="text-xl font-semibold"
           style={createSpringStyles(150, 50)}
         >
           Wykres zamówień RdR
         </animated.div>
-        <div className="flex text-justify pr-5 mt-5 flex-col">
+        <div className="flex text-justify pr-5 mt-5 flex-col chart-desc">
           <animated.p style={createSpringStyles(150, 50)}>
             Nasz sklep internetowy dynamicznie rozwija się z każdym rokiem, a
             dane pokazują stały wzrost sprzedaży. Wykres prezentuje różnicę w
