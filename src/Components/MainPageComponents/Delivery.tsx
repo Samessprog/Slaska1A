@@ -45,7 +45,7 @@ const Delivery: React.FC = () => {
           target="_blank"
         >
           <div className="w-6/12  ">
-            <img src={DPDLogo} alt="Loading Err" className="w-full h-full ke" />
+            <img src={DPDLogo} alt="Loading Err" className="w-full h-full" />
           </div>
         </Link>
         <Link

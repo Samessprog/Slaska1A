@@ -56,10 +56,29 @@ const Opinions: React.FC = () => {
     slidesToShow: 2,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          nextArrow: null,
+          prevArrow: null,
+          speed: 1000,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          nextArrow: null,
+          prevArrow: null,
+          speed: 1000,
+        },
+      },
+    ],
   };
 
   return (
-    <section className="mt-20 pt-10 options-holder ">
+    <section className="mt-10 lg:mt-20 pt-10 options-holder ">
       <div className="text-3xl font-semibold mb-10">
         <h2>
           {" "}
