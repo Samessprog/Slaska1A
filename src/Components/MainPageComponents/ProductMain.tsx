@@ -22,8 +22,8 @@ import konfirmaty from "../../assets/productIcons/Konfirmaty.webp";
 
 const ProductMain: React.FC = () => {
   return (
-    <section className="" id="productContext">
-      <div className="text-3xl font-semibold flex w-full justify-center items-center">
+    <section className="pt-10 xl:pt-5" id="productContext">
+      <div className="text-3xl font-semibold flex w-full justify-center items-center flex-col sm:flex-row">
         <h2 className="mr-3">
           {" "}
           <em>Zapoznaj się z naszymi produktamia</em>{" "}
@@ -34,30 +34,35 @@ const ProductMain: React.FC = () => {
           viewBox="0 -960 960 960"
           width="35px"
           fill="undefined"
+          className="mt-2 sm:mt-0"
         >
           <path d="M620-163 450-333l56-56 114 114 226-226 56 56-282 282Zm220-397h-80v-200h-80v120H280v-120h-80v560h240v80H200q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h167q11-35 43-57.5t70-22.5q40 0 71.5 22.5T594-840h166q33 0 56.5 23.5T840-760v200ZM480-760q17 0 28.5-11.5T520-800q0-17-11.5-28.5T480-840q-17 0-28.5 11.5T440-800q0 17 11.5 28.5T480-760Z" />
         </svg>
       </div>
-      <div className="w-full flex flex-wrap pl-2 pr-2 justify-center mt-10">
-        <ProductCard img={KPRFAST}>Kołki szybkiego montażu</ProductCard>
-        <ProductCard img={MocowanieTradycyjneLogo}>
-          Mocowanie tradycyjne
-        </ProductCard>
-        <ProductCard img={MocowanieRamowe}>Mocowanie ramowe</ProductCard>
-        <ProductCard img={MocowanieOscieznic}>Mocowanie osnieznic</ProductCard>
-        <ProductCard img={DoDrewna}>Wkręty do drewna</ProductCard>
-        <ProductCard img={Kotwy}>Kotwy</ProductCard>
-        <ProductCard img={Gwozdzie}>Gwozdzie</ProductCard>
-        <ProductCard img={Samowierty}>Wkręty samowiercące</ProductCard>
-        <ProductCard img={Dach}>Wkręty do dachu</ProductCard>
-        <ProductCard img={katowniki}>Złącza ciesielskie</ProductCard>
-        <ProductCard img={Goliat}>System Goliat</ProductCard>
-        <ProductCard img={LacznikiGwintowe}>Łączniuki gwintowe</ProductCard>
-        <ProductCard img={Podkladki}>Podkładki</ProductCard>
-        <ProductCard img={Nakredki}>Nakrętki</ProductCard>
-        <ProductCard img={Blistry}>Blistry</ProductCard>
-        <ProductCard img={KotwyChemiczne}>Kotwy Chemiczne</ProductCard>
-        <ProductCard img={konfirmaty}>konfirmaty</ProductCard>
+      <div className="flex justify-center">
+        <div className="w-10/12 grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 pl-2 pr-6 mt-10">
+          <ProductCard img={KPRFAST}>Kołki szybkiego montażu</ProductCard>
+          <ProductCard img={MocowanieTradycyjneLogo}>
+            Mocowanie tradycyjne
+          </ProductCard>
+          <ProductCard img={MocowanieRamowe}>Mocowanie ramowe</ProductCard>
+          <ProductCard img={MocowanieOscieznic}>
+            Mocowanie osnieznic
+          </ProductCard>
+          <ProductCard img={DoDrewna}>Wkręty do drewna</ProductCard>
+          <ProductCard img={Kotwy}>Kotwy</ProductCard>
+          <ProductCard img={Gwozdzie}>Gwozdzie</ProductCard>
+          <ProductCard img={Samowierty}>Wkręty samowiercące</ProductCard>
+          <ProductCard img={Dach}>Wkręty do dachu</ProductCard>
+          <ProductCard img={katowniki}>Złącza ciesielskie</ProductCard>
+          <ProductCard img={Goliat}>System Goliat</ProductCard>
+          <ProductCard img={LacznikiGwintowe}>Łączniuki gwintowe</ProductCard>
+          <ProductCard img={Podkladki}>Podkładki</ProductCard>
+          <ProductCard img={Nakredki}>Nakrętki</ProductCard>
+          <ProductCard img={Blistry}>Blistry</ProductCard>
+          <ProductCard img={KotwyChemiczne}>Kotwy Chemiczne</ProductCard>
+          <ProductCard img={konfirmaty}>konfirmaty</ProductCard>
+        </div>
       </div>
     </section>
   );

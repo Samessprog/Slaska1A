@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import BrandContext from "./BrandContext";
 
@@ -25,6 +25,20 @@ const Brands: React.FC = () => {
     autoplaySpeed: 0,
     cssEase: "linear",
     pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
 
   return (
