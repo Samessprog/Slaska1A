@@ -16,7 +16,7 @@ const Footer = () => {
               aria-label="View location on Google Maps"
             >
               <div className="flex mt-10 xl:mt-1 cursor-pointer">
-                <div className="mb-3 w-12/12 flex flex-col items-center xl:items-start cursor-pointer text-xs sm:text-lg xl:text-xs">
+                <div className="mb-3 w-12/12 flex flex-col items-center xl:items-start cursor-pointer text-xs md:text-sm lg:text-lg xl:text-xs">
                   <div className="flex items-center c cursor-pointer">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -37,18 +37,18 @@ const Footer = () => {
               </div>
             </Link>
 
-            <div className="flex flex-col items-start justify-start text-sm ">
+            <div className="flex flex-col items-start justify-start text-xs xl:text-sm ">
               <div>NIP: xxx-xxx-xx-xx</div>
               <div>REGON: xxx-xxx-xxx</div>
             </div>
-            <div className="mt-3 lg:mt-5 mb-2 text-xs sm:text-lg xl:text-xs text-start ">
+            <div className="mt-3 lg:mt-5 mb-2 text-xs sm:text-md md:text-lg xl:text-xs text-start ">
               W celu dodatkowych informacji zapraszamy do kontaktu
               telefonicznego
             </div>
           </div>
           <div className="xl:w-2/12 pt-5 xl:pt-0">
             <div>
-              <header className="text-base sm:text-2xl xl:text-base">
+              <header className="text-base sm:text-xl xl:text-base">
                 <h2>Na skróty</h2>
               </header>
             </div>
@@ -56,7 +56,7 @@ const Footer = () => {
               <li className="mt-2">
                 <a
                   href="#productContext"
-                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm sm:xs-md xl:text-xs"
+                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm sm:text-sm xl:text-xs"
                 >
                   Oferta produktów
                 </a>
@@ -65,7 +65,7 @@ const Footer = () => {
                 <Link
                   to="https://slaska1a.pl/"
                   target="_blank"
-                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm sm:xs-md xl:text-xs"
+                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm xl:text-xs"
                 >
                   Sklep
                 </Link>
@@ -74,7 +74,7 @@ const Footer = () => {
                 <Link
                   to="https://allegro.pl/uzytkownik/Elektrokoncept"
                   target="_blank"
-                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm sm:xs-md xl:text-xs"
+                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm  xl:text-xs"
                 >
                   Allego
                 </Link>
@@ -82,7 +82,7 @@ const Footer = () => {
               <li className="mt-2">
                 <a
                   href="#aboutUs"
-                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 sm:xs-md xl:text-xs"
+                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  xl:text-xs"
                 >
                   O nas
                 </a>
@@ -90,7 +90,7 @@ const Footer = () => {
               <li className="mt-2">
                 <a
                   href="#footer"
-                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 sm:xs-md xl:text-xs"
+                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  xl:text-xs"
                 >
                   Kontakt
                 </a>
@@ -99,7 +99,7 @@ const Footer = () => {
                 <Link
                   to="https://allegro.pl/uzytkownik/Elektrokoncept"
                   target="_blank"
-                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 sm:xs-md xl:text-xs"
+                  className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  xl:text-xs"
                 >
                   Allegro
                 </Link>
@@ -108,43 +108,43 @@ const Footer = () => {
           </div>
           <div className="xl:w-2/12 pt-5 xl:pt-0">
             <div>
-              <header className="text-base sm:text-2xl xl:text-base">
+              <header className="text-base sm:text-xl xl:text-base">
                 <h2>Godziny otwarcia</h2>
               </header>
             </div>
             <ul className="text-[#AAAAB1] mt-2">
               <li className="mt-1">
-                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 sm:xs-md xl:text-xs">
+                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 :text-sm  xl:text-xs">
                   Pon: 8 - 16
                 </Link>
               </li>
               <li className="mt-1">
-                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 sm:xs-md xl:text-xs">
+                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  text-sm  xl:text-xs">
                   Wt: 8 - 16
                 </Link>
               </li>
               <li className="mt-1">
-                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 sm:xs-md xl:text-xs">
+                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  text-sm  xl:text-xs">
                   Śr: 8 - 16
                 </Link>
               </li>
               <li className="mt-1">
-                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 sm:xs-md xl:text-xs">
+                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300text-sm  xl:text-xs">
                   Czw: 8 - 16
                 </Link>
               </li>
               <li className="mt-1">
-                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  text-sm sm:xs-md xl:text-xs">
+                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  text-sm  xl:text-xs">
                   Pt: 8 - 16
                 </Link>
               </li>
               <li className="mt-2">
-                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  text-sm sm:xs-md xl:text-xs">
+                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300   text-sm  xl:text-xs">
                   Sobota: Nieczynne
                 </Link>
               </li>
               <li className="mt-1">
-                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm sm:xs-md xl:text-xs">
+                <Link className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  text-sm  xl:text-xs">
                   Niedziela: Nieczynne
                 </Link>
               </li>
@@ -167,7 +167,7 @@ const Footer = () => {
                 >
                   <path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
                 </svg>
-                <div className="hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm md:text-base xl:text-sm">
+                <div className="hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-xs md:text-base xl:text-sm">
                   881 386 881
                 </div>
               </li>
@@ -181,7 +181,7 @@ const Footer = () => {
                 >
                   <path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
                 </svg>
-                <div className="hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  text-sm md:text-base xl:text-sm">
+                <div className="hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  text-xs md:text-base xl:text-sm">
                   881 386 881
                 </div>
               </li>
@@ -196,13 +196,13 @@ const Footer = () => {
                 >
                   <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
                 </svg>
-                <div className="hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  text-sm md:text-base xl:text-sm">
+                <div className="hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  text-xs md:text-base xl:text-sm">
                   JAKIŚTAMMAIL@COS.PL
                 </div>
               </li>
             </ul>
           </div>
-          <div className="xl:w-3/12 flex flex-col items-end pt-10 xl:pt-0">
+          <div className="xl:w-3/12 flex flex-col items-end pt-10 xl:pt-0 items-center">
             <div className="flex w-full justify-center items-center flex-col xl:flex-row">
               <div className="flex mb-10 ">
                 <Link>
@@ -249,7 +249,7 @@ const Footer = () => {
                   </div>
                 </Link>
               </div>
-              <div className=" flex justify-center allegro-icon h-full mt-4">
+              <div className=" flex justify-center allegro-icon h-full mt-0 xl:mt-4">
                 <Link>
                   <svg
                     className="w-[130px] h-[45px] sm:w-[200px] sm:h-[90px] xl:w-[120px] xl:h-[40px] allegro-icon"
@@ -262,7 +262,7 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="flex justify-end items-end mt-10 img-logo-holder">
+            <div className="flex justify-end items-end mt-10 img-logo-holder w-full">
               <img
                 src={footerLogo}
                 alt="loading err"
