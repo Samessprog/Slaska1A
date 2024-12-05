@@ -18,7 +18,7 @@ const Main: React.FC = () => {
       <div className="tests">
         <Opinions />
         <BarChart />
-        <section className="mt-10 w-full pl-5 pr-5">
+        <section className="mt-10 w-full  md:pl-5 md:pr-5">
           <div className="mb-10 flex justify-center">
             <h2 className="text-3xl font-semibold">
               {" "}
