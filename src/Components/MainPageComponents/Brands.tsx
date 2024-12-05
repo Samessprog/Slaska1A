@@ -33,9 +33,9 @@ const Brands: React.FC = () => {
         },
       },
       {
-        breakpoint: 700,
+        breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
     ],

@@ -55,11 +55,17 @@ const BarChart: React.FC = () => {
           options={options}
           series={series}
           type="bar"
-          width="500"
-          height="430"
+          style={{
+            width: "100%",
+            height: "100%",
+            minWidth: "300px",
+            maxWidth: "600px",
+            minHeight: "300px",
+            maxHeight: "500px",
+          }}
         />
       </div>
-      <div className="w-full lg:w-6/12 pl-5 lg:pl-10 flex flex-col items-start pr-5 lg:pr-20">
+      <div className="w-full lg:w-6/12 pl-5 lg:pl-10 flex flex-col items-start sm:pr-5 lg:pr-20">
         <animated.div
           className="text-xl font-semibold"
           style={createSpringStyles(150, 50)}

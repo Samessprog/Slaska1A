@@ -63,7 +63,8 @@ const Opinions: React.FC = () => {
           slidesToShow: 1,
           nextArrow: null,
           prevArrow: null,
-          speed: 1000,
+          autoplay: false,
+          speed: 200,
         },
       },
       {
