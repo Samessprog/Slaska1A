@@ -51,7 +51,7 @@ const Opinions: React.FC = () => {
     dots: false,
     infinite: true,
     autoplay: true,
-    speed: 5000,
+    speed: 2500,
     autoplaySpeed: 10000,
     slidesToShow: 2,
     nextArrow: <SampleNextArrow />,

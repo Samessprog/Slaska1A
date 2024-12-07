@@ -23,7 +23,7 @@ import konfirmaty from "../../assets/productIcons/Konfirmaty.webp";
 const ProductMain: React.FC = () => {
   return (
     <section className="pt-10 xl:pt-5" id="productContext">
-      <div className="text-3xl font-semibold flex w-full justify-center items-center flex-col sm:flex-row">
+      <div className="text-3xl font-semibold flex w-full justify-center items-center flex-col sm:flex-row mt-16">
         <h2 className="mr-3">
           {" "}
           <em>Zapoznaj się z naszymi produktamia</em>{" "}

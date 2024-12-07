@@ -9,6 +9,7 @@ const BarChart: React.FC = () => {
     triggerOnce: true,
   });
 
+
   const createSpringStyles = (translateX: number, friction: number) =>
     useSpring({
       opacity: inView ? 1 : 0,
@@ -59,9 +60,9 @@ const BarChart: React.FC = () => {
             width: "100%",
             height: "100%",
             minWidth: "300px",
-            maxWidth: "600px",
+            maxWidth: "700px",
             minHeight: "300px",
-            maxHeight: "500px",
+            maxHeight: "700px",
           }}
         />
       </div>

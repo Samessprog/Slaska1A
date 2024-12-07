@@ -1,23 +1,27 @@
-.slick-dots li button:before {
-    font-size: 12px !important;
-    color: #333;
+.slider-container {
 
-    &:active {
-        color: red;
+    .slick-dots li button:before {
+        font-size: 12px !important;
+        color: #333;
+
+        &:active {
+            color: red;
+        }
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: #ff6347 !important;
+    }
+
+    .slick-slide {
+        cursor: grab;
+    }
+
+    .slick-slide:active {
+        cursor: grabbing;
     }
 }
 
-.slick-dots li.slick-active button:before {
-    color: #ff6347 !important;
-}
-
-.slick-slide {
-    cursor: grab;
-}
-
-.slick-slide:active {
-    cursor: grabbing;
-}
 
 .test {
     @media (max-width: 768px) {
@@ -35,12 +39,13 @@
     background-image: linear-gradient(45deg, #e62c0b, #fc5739);
     color: white;
     border-radius: 30px 10px 30px 10px;
-    border: rgb(125, 125, 125) solid 1px;
+    border: rgba(125, 125, 125, 0.479) solid 1px;
     cursor: pointer;
     transition: all ease-in-out .3s;
     overflow: hidden;
 
-    &:hover {
+    &:hover,
+    &:focus {
         transform: translateY(-8px);
         background-image: linear-gradient(45deg, #ff2600, #e62c0b);
         box-shadow: 10px 10px 15px 0px rgb(95, 95, 95);

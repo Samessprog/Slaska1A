@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Slider from "react-slick";
 import BrandContext from "./BrandContext";
 
@@ -43,7 +43,7 @@ const Brands: React.FC = () => {
 
   return (
     <section className="mt-20">
-      <div className=" pl-4 pr-4">
+      <div className=" pl-4 pr-4 cursor-default">
         <Slider {...settings}>
           <BrandContext />
           <BrandContext />
