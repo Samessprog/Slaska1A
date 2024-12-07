@@ -23,7 +23,7 @@ import konfirmaty from "../../assets/productIcons/Konfirmaty.webp";
 const ProductMain: React.FC = () => {
   return (
     <section className="pt-10 xl:pt-5" id="productContext">
-      <div className="text-3xl font-semibold flex w-full justify-center items-center flex-col sm:flex-row">
+      <div className="text-3xl font-semibold flex w-full justify-center items-center flex-col sm:flex-row mt-16">
         <h2 className="mr-3">
           {" "}
           <em>Zapoznaj się z naszymi produktamia</em>{" "}
@@ -40,7 +40,7 @@ const ProductMain: React.FC = () => {
         </svg>
       </div>
       <div className="flex justify-center">
-        <div className="w-10/12 grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 pl-2 pr-6 mt-10">
+        <div className="w-11/12 grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-1 sm:gap-4 pl-2 pr-6 mt-10">
           <ProductCard img={KPRFAST}>Kołki szybkiego montażu</ProductCard>
           <ProductCard img={MocowanieTradycyjneLogo}>
             Mocowanie tradycyjne

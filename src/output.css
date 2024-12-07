@@ -650,6 +650,10 @@ video {
   margin-right: 1.25rem;
 }
 
+.mt-0 {
+  margin-top: 0px;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -674,16 +678,8 @@ video {
   margin-top: 0.75rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .mt-5 {
   margin-top: 1.25rem;
-}
-
-.mt-0 {
-  margin-top: 0px;
 }
 
 .block {
@@ -726,16 +722,20 @@ video {
   height: 100%;
 }
 
+.max-h-\[700\] {
+  max-height: 700;
+}
+
+.max-h-\[500\] {
+  max-height: 500;
+}
+
 .w-10\/12 {
   width: 83.333333%;
 }
 
 .w-11\/12 {
   width: 91.666667%;
-}
-
-.w-2\/12 {
-  width: 16.666667%;
 }
 
 .w-3\/12 {
@@ -764,6 +764,22 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-1\/12 {
+  width: 8.333333%;
+}
+
+.w-2\/12 {
+  width: 16.666667%;
+}
+
+.max-w-\[700\] {
+  max-width: 700;
+}
+
+.max-w-\[500\] {
+  max-width: 500;
 }
 
 .origin-top-right {
@@ -828,6 +844,18 @@ video {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-0 {
+  gap: 0px;
 }
 
 .overflow-hidden {
@@ -1111,12 +1139,28 @@ video {
     width: 200px;
   }
 
+  .sm\:w-10\/12 {
+    width: 83.333333%;
+  }
+
+  .sm\:w-8\/12 {
+    width: 66.666667%;
+  }
+
+  .sm\:w-1\/12 {
+    width: 8.333333%;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:gap-4 {
+    gap: 1rem;
   }
 
   .sm\:pb-20 {
@@ -1131,27 +1175,27 @@ video {
     padding-right: 2.5rem;
   }
 
+  .sm\:pr-5 {
+    padding-right: 1.25rem;
+  }
+
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-
-  .sm\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 
   .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 768px) {
-  .md\:mt-4 {
-    margin-top: 1rem;
-  }
-
   .md\:flex {
     display: flex;
   }
@@ -1166,6 +1210,10 @@ video {
 
   .md\:w-5\/12 {
     width: 41.666667%;
+  }
+
+  .md\:w-auto {
+    width: auto;
   }
 
   .md\:grid-cols-2 {
@@ -1223,6 +1271,10 @@ video {
 
   .lg\:w-8\/12 {
     width: 66.666667%;
+  }
+
+  .lg\:w-1\/12 {
+    width: 8.333333%;
   }
 
   .lg\:grid-cols-3 {

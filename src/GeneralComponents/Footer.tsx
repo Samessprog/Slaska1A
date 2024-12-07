@@ -272,10 +272,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center flex-col privacy-holder text-sm">
-        <div className="mt-2"> &reg; Slaska1a. All rights reserved.</div>
+      <div className="flex justify-center items-center flex-col privacy-holder text-xs">
+        <div className="mt-2 "> &reg; Slaska1a. All rights reserved.</div>
         <div className="mb-2 mt-2">
-          <Link to={"https://github.com/Samessprog"} target="_blank">
+          <Link
+            className="transition-all ease-in-out hover:text-red-400 text-white"
+            to={"https://github.com/Samessprog"}
+            target="_blank"
+          >
             Created by Sames
           </Link>
         </div>

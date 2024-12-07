@@ -56,7 +56,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
         </div>
 
         <div
-          className={`hamburger-menu md:hidden order-1  ${
+          className={`hamburger-menu md:hidden order-1 w-3/12 md:w-auto  ${
             isOpenHamburger ? "open" : "close"
           }`}
           onClick={() => {
@@ -144,12 +144,12 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
           </ul>
         </div>
 
-        <div className="w-2/12 order-3 ">
+        <div className="w-3/12 md:w-auto order-3 flex justify-end">
           <div
             className="relative inline-block text-left"
             ref={dropDownMenuLang}
           >
-            <div>
+            <div className="">
               <button
                 type="button"
                 onClick={toggleDropdown}
