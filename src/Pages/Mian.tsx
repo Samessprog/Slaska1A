@@ -1,23 +1,77 @@
-import React from "react";
-import MainSlider from "../Components/MainPageComponents/MainSlider";
-import ProductMain from "../Components/MainPageComponents/ProductMain";
+import React, { lazy, Suspense } from "react";
 import AboutUS from "../Components/MainPageComponents/AboutUs";
-import Brands from "../Components/MainPageComponents/Brands";
-import BarChart from "../Components/MainPageComponents/Chart";
-import Delivery from "../Components/MainPageComponents/Delivery";
-import Opinions from "../Components/MainPageComponents/Opinions";
 import Summary from "../Components/MainPageComponents/Summary";
+import { PropagateLoader } from "react-spinners";
+//Lazy imports
+const MainSlider = lazy(
+  () => import("../Components/MainPageComponents/MainSlider")
+);
+
+const Delivery = lazy(
+  () => import("../Components/MainPageComponents/Delivery")
+);
+const Opinions = lazy(
+  () => import("../Components/MainPageComponents/Opinions")
+);
+const Brands = lazy(() => import("../Components/MainPageComponents/Brands"));
+const BarChart = lazy(() => import("../Components/MainPageComponents/Chart"));
+const ProductMain = lazy(
+  () => import("../Components/MainPageComponents/ProductMain")
+);
 
 const Main: React.FC = () => {
   return (
     <>
-      <MainSlider />
+      <Suspense
+        fallback={
+          <div className="loading-slider">
+            <PropagateLoader />
+          </div>
+        }
+      >
+        <MainSlider />
+      </Suspense>
+
       <AboutUS />
-      <ProductMain />
-      <Brands />
+      <Suspense
+        fallback={
+          <div className="loading-slider">
+            <PropagateLoader />
+          </div>
+        }
+      >
+        <ProductMain />
+      </Suspense>
+      <Suspense
+        fallback={
+          <div className="loading-slider">
+            <PropagateLoader />
+          </div>
+        }
+      >
+        <Brands />
+      </Suspense>
+
       <div className="tests">
-        <Opinions />
-        <BarChart />
+        <Suspense
+          fallback={
+            <div className="loading-slider">
+              <PropagateLoader />
+            </div>
+          }
+        >
+          <Opinions />
+        </Suspense>
+        <Suspense
+          fallback={
+            <div className="loading-slider">
+              <PropagateLoader />
+            </div>
+          }
+        >
+          <BarChart />
+        </Suspense>
+
         <section className="mt-10 w-full  md:pl-5 md:pr-5">
           <div className="mb-10 flex justify-center">
             <h2 className="text-3xl font-semibold">
@@ -42,7 +96,15 @@ const Main: React.FC = () => {
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </section>
-        <Delivery />
+        <Suspense
+          fallback={
+            <div className="loading-slider">
+              <PropagateLoader />
+            </div>
+          }
+        >
+          <Delivery />
+        </Suspense>
       </div>
       <Summary />
     </>
