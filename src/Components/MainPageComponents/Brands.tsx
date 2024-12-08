@@ -1,6 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
 import BrandContext from "./BrandContext";
+import t from "../../assets/brandsLogos/0logo1.png";
+import domaxLogo from "../../assets/brandsLogos/mini_press_domax.png";
+import klimas from "../../assets/brandsLogos/klimas.png";
+import magKrak from "../../assets/brandsLogos/Magkrak.png";
+import fisher from "../../assets/brandsLogos/0logo5.png";
 
 interface BrandInterface {
   dots: boolean;
@@ -45,13 +50,11 @@ const Brands: React.FC = () => {
     <section className="mt-20">
       <div className=" pl-4 pr-4 cursor-default">
         <Slider {...settings}>
-          <BrandContext />
-          <BrandContext />
-          <BrandContext />
-          <BrandContext />
-          <BrandContext />
-          <BrandContext />
-          <BrandContext />
+          <BrandContext logoImg={t} />
+          <BrandContext logoImg={klimas} />
+          <BrandContext logoImg={magKrak} />
+          <BrandContext logoImg={domaxLogo} />
+          <BrandContext logoImg={fisher} />
         </Slider>
       </div>
     </section>

@@ -128,6 +128,105 @@ const Opinions: React.FC = () => {
               </div>
             </div>
           </div>
+
+          <div className="slide text-justify">
+            <p>
+              Jestem bardzo zadowolony z zakupów w tym sklepie! Wszystko
+              przebiegło sprawnie, produkty dotarły szybko i w doskonałym
+              stanie. Strona jest przejrzysta, a proces zakupu intuicyjny.
+              Zdecydowanie polecam wszystkim, którzy szukają jakości i
+              profesjonalizmu!
+            </p>
+            <div className="mt-5">
+              ~ Karolina K.
+              <div>
+                <Rating
+                  name="half-rating-read"
+                  defaultValue={5}
+                  precision={5}
+                  readOnly
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="slide text-justify">
+            <p>
+              Świetna obsługa i bardzo szybka dostawa! Zamówiłem kilka narzędzi
+              do remontu, a wszystkie dotarły następnego dnia. Produkty są
+              naprawdę solidne, a ceny bardzo konkurencyjne. Na pewno wrócę po
+              kolejne zakupy!
+            </p>
+            <div className="mt-5">
+              ~ Michał R.
+              <div>
+                <Rating
+                  name="half-rating-read"
+                  defaultValue={5}
+                  precision={5}
+                  readOnly
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="slide text-justify">
+            <p>
+              Zdecydowanie najlepszy sklep z narzędziami, w jakim kiedykolwiek
+              robiłem zakupy. Produkty są wysokiej jakości, a obsługa klienta
+              bardzo pomocna. Czas realizacji zamówienia jest błyskawiczny!
+            </p>
+            <div className="mt-5">
+              ~ Andrzej S.
+              <div>
+                <Rating
+                  name="half-rating-read"
+                  defaultValue={5}
+                  precision={5}
+                  readOnly
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="slide text-justify">
+            <p>
+              Bardzo polecam ten sklep! Znajdują się tu wszystkie niezbędne
+              akcesoria budowlane, a ceny są naprawdę przystępne. Bardzo miła
+              obsługa, która szybko odpowiada na pytania. Zdecydowanie tu wrócę!
+            </p>
+            <div className="mt-5">
+              ~ Anna W.
+              <div>
+                <Rating
+                  name="half-rating-read"
+                  defaultValue={5}
+                  precision={5}
+                  readOnly
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="slide text-justify">
+            <p>
+              Doskonała obsługa i profesjonalne doradztwo! Zamówiłem sprzęt do
+              budowy i wszystko było zgodne z opisem. Dodatkowo pomocna obsługa,
+              która pomogła mi dobrać odpowiednie akcesoria. Na pewno wrócę po
+              kolejne produkty!
+            </p>
+            <div className="mt-5">
+              ~ Tomasz K.
+              <div>
+                <Rating
+                  name="half-rating-read"
+                  defaultValue={5}
+                  precision={5}
+                  readOnly
+                />
+              </div>
+            </div>
+          </div>
         </Slider>
       </div>
     </section>

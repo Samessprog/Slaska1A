@@ -1,9 +1,9 @@
 import React from "react";
-import tt from "../../../../Zuzu/viteGroomer/src/assets/DALL·E 2024-10-30 19.49.17 - A realistic, square image of a dog grooming service scene for a pet grooming website. It shows a groomer carefully trimming and brushing a happy, rela.webp";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
 import i18n from "./../../i18n";
 import { useTranslation } from "react-i18next";
+import usCompoanyImg from "../../assets//2024.jpg";
 
 const AboutUS = () => {
   const { t } = useTranslation();
@@ -27,46 +27,48 @@ const AboutUS = () => {
         {" "}
         <h2>
           {" "}
-          <h1>{t("title")}</h1>
+          <h1 className="mb-2">Dowiedz się coś o nas!</h1>
         </h2>
       </div>
       <div className="text-center text-sm text-about w-full flex justify-center">
         <div className="w-full md:w-5/12 text-about">
-          accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum nunc.
-          Nam ante elit, tincidunt viverra quam rhoncus, fermentum volutpat
-          eros.
+          Jesteśmy Twoim zaufanym partnerem w budowie i remoncie. Oferujemy
+          najwyższej jakości sprzęt budowlany, który sprosta każdemu wyzwaniu!
         </div>
       </div>
       <div className="mt-16 w-full flex xl:relative flex-col">
-        <animated.div className="text-justify about-us-holder-content p-8 w-full xl:w-5/12 absolute-r48-mt-1 xl:absolute order-2 xl:order-1" style={styles}>
-          <h3 className="mb-5 text-2xl">
-            Jesteśmy tu by poagać! Zapoznaj się z nami
-          </h3>
+        <animated.div
+          className="text-justify about-us-holder-content p-8 w-full xl:w-5/12 absolute-r48-mt-1 xl:absolute order-2 xl:order-1"
+          style={styles}
+        >
+          <h3 className="mb-5 text-2xl">Jesteśmy tu, by pomóc!</h3>
           <p className="mb-5 text-about">
-            accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum nunc.
-            Nam ante elit, tincidunt viverra quam rhoncus, fermentum volutpat
-            eros.accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum
-            nunc. Nam ante elit, tincidunt viverra quam rhoncus, fermentum
+            Jako firma z kilkuletnim doświadczeniem, oferujemy szeroki wybór
+            sprzętu budowlanego: kołki, śruby, kątowniki, haki, rękawice i wiele
+            innych. Działamy zarówno na Allegro, jak i poprzez nasz sklep
+            internetowy, zapewniając wygodny dostęp do produktów, które spełnią
+            Twoje oczekiwania.
           </p>
-          <p className="mb-5 text-about ">
-            accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum nunc.
-            Nam ante elit, tincidunt viverra quam rhoncus, fermentum volutpat
-            eros.accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum
-            nunc. Nam ante elit, tincidunt viverra quam rhoncus, fermentum
+          <p className="mb-5 text-about">
+            Dzięki współpracy z renomowanymi producentami, dostarczamy narzędzia
+            i akcesoria budowlane najwyższej jakości. Nasza oferta jest
+            skierowana do profesjonalistów i majsterkowiczów, którzy potrzebują
+            niezawodnego sprzętu do swoich projektów.
           </p>
-          <p className="text-about ">
-            accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum nunc.
-            Nam ante elit, tincidunt viverra quam rhoncus, fermentum volutpat
-            eros.accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum
-            nunc. Nam ante elit, tincidunt viverra quam rhoncus, fermentum
+          <p className="text-about">
+            Z nami zrealizujesz każdy projekt szybko i efektywnie – zawsze
+            stawiamy na jakość, szybki czas realizacji zamówienia i
+            konkurencyjne ceny. Sprawdź naszą ofertę i dołącz do grona
+            zadowolonych klientów!
           </p>
         </animated.div>
+
         <div
-          className="w-12/12 xl:w-5/12 about-us-img-holder xl:absolute order-1 xl:order-2 flex justify-center"
+          className="w-12/12 xl:w-5/12 about-us-img-holder xl:absolute order-1 xl:order-2 flex justify-center items-start"
           ref={ref}
         >
           <img
-            src={tt}
+            src={usCompoanyImg}
             alt="loading error"
             className="xl:w-full h-full lg:w-8/12 md:w-10/12 w-full "
           />

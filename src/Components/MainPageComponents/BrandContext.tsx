@@ -1,10 +1,9 @@
 import React from "react";
-import t from "../../assets/0logo1.png";
 
-const BrandContext: React.FC = () => {
+const BrandContext: React.FC = ({ logoImg }) => {
   return (
     <div className="brand-holder rounded-md cursor-pointer">
-      <img src={t} alt="loading error" className="brand-img" />
+      <img src={logoImg} alt="loading error" className="brand-img" />
     </div>
   );
 };

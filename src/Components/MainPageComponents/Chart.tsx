@@ -45,7 +45,7 @@ const BarChart: React.FC = () => {
   const series = [
     {
       name: "Wysłane zamówienia",
-      data: [30, 40, 35, 50, 80],
+      data: [5700, 10000, 16000, 24000, 31000],
     },
   ];
 
