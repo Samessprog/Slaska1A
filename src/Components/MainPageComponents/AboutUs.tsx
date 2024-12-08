@@ -25,10 +25,7 @@ const AboutUS = () => {
     >
       <div className="text-3xl font font-semibold ">
         {" "}
-        <h2>
-          {" "}
-          <h1 className="mb-2">Dowiedz się coś o nas!</h1>
-        </h2>
+        <h1 className="mb-2">Dowiedz się coś o nas!</h1>
       </div>
       <div className="text-center text-sm text-about w-full flex justify-center">
         <div className="w-full md:w-5/12 text-about">
