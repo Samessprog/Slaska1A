@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "./ProductCard";
+import { useTranslation } from "react-i18next";
 
 //products icons
 import KPRFAST from "../../assets/4ikonanew2.webp";
@@ -21,12 +22,14 @@ import Nakredki from "../../assets/productIcons/Nakredki.webp";
 import konfirmaty from "../../assets/productIcons/Konfirmaty.webp";
 
 const ProductMain: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="pt-10 xl:pt-5" id="productContext">
       <div className="text-3xl font-semibold flex w-full justify-center items-center flex-col sm:flex-row mt-16">
         <h2 className="mr-3">
           {" "}
-          <em>Zapoznaj się z naszymi produktamia</em>{" "}
+          <em>{t("productHeader")}</em>
         </h2>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -41,27 +44,27 @@ const ProductMain: React.FC = () => {
       </div>
       <div className="flex justify-center">
         <div className="w-11/12 grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-1 sm:gap-4 pl-2 pr-6 mt-10">
-          <ProductCard img={KPRFAST}>Kołki szybkiego montażu</ProductCard>
+          <ProductCard img={KPRFAST}>{t("productItem1")}</ProductCard>
           <ProductCard img={MocowanieTradycyjneLogo}>
-            Mocowanie tradycyjne
+          {t("productItem2")}
           </ProductCard>
-          <ProductCard img={MocowanieRamowe}>Mocowanie ramowe</ProductCard>
+          <ProductCard img={MocowanieRamowe}>{t("productItem3")}</ProductCard>
           <ProductCard img={MocowanieOscieznic}>
-            Mocowanie osnieznic
+          {t("productItem4")}c
           </ProductCard>
-          <ProductCard img={DoDrewna}>Wkręty do drewna</ProductCard>
-          <ProductCard img={Kotwy}>Kotwy</ProductCard>
-          <ProductCard img={Gwozdzie}>Gwozdzie</ProductCard>
-          <ProductCard img={Samowierty}>Wkręty samowiercące</ProductCard>
-          <ProductCard img={Dach}>Wkręty do dachu</ProductCard>
-          <ProductCard img={katowniki}>Złącza ciesielskie</ProductCard>
-          <ProductCard img={Goliat}>System Goliat</ProductCard>
-          <ProductCard img={LacznikiGwintowe}>Łączniuki gwintowe</ProductCard>
-          <ProductCard img={Podkladki}>Podkładki</ProductCard>
-          <ProductCard img={Nakredki}>Nakrętki</ProductCard>
-          <ProductCard img={Blistry}>Blistry</ProductCard>
-          <ProductCard img={KotwyChemiczne}>Kotwy Chemiczne</ProductCard>
-          <ProductCard img={konfirmaty}>konfirmaty</ProductCard>
+          <ProductCard img={DoDrewna}>{t("productItem5")}</ProductCard>
+          <ProductCard img={Kotwy}>{t("productItem6")}</ProductCard>
+          <ProductCard img={Gwozdzie}>{t("productItem7")}</ProductCard>
+          <ProductCard img={Samowierty}>{t("productItem8")}</ProductCard>
+          <ProductCard img={Dach}>{t("productItem9")}</ProductCard>
+          <ProductCard img={katowniki}>{t("productItem10")}</ProductCard>
+          <ProductCard img={Goliat}>{t("productItem11")}</ProductCard>
+          <ProductCard img={LacznikiGwintowe}>{t("productItem12")}</ProductCard>
+          <ProductCard img={Podkladki}>{t("productItem13")}</ProductCard>
+          <ProductCard img={Nakredki}>{t("productItem14")}</ProductCard>
+          <ProductCard img={Blistry}>{t("productItem15")}</ProductCard>
+          <ProductCard img={KotwyChemiczne}>{t("productItem16")}</ProductCard>
+          <ProductCard img={konfirmaty}>{t("productItem17")}</ProductCard>
         </div>
       </div>
     </section>

@@ -1,12 +1,12 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
-import i18n from "./../../i18n";
 import { useTranslation } from "react-i18next";
 import usCompoanyImg from "../../assets//2024.jpg";
 
 const AboutUS = () => {
   const { t } = useTranslation();
+
   const { ref, inView } = useInView({
     threshold: 0.4,
     triggerOnce: true,
@@ -25,39 +25,20 @@ const AboutUS = () => {
     >
       <div className="text-3xl font font-semibold ">
         {" "}
-        <h1 className="mb-2">Dowiedz się coś o nas!</h1>
+        <h1>{t("title")}</h1>
       </div>
       <div className="text-center text-sm text-about w-full flex justify-center">
-        <div className="w-full md:w-5/12 text-about">
-          Jesteśmy Twoim zaufanym partnerem w budowie i remoncie. Oferujemy
-          najwyższej jakości sprzęt budowlany, który sprosta każdemu wyzwaniu!
-        </div>
+        <div className="w-full md:w-5/12 text-about">{t("starter")}</div>
       </div>
       <div className="mt-16 w-full flex xl:relative flex-col">
         <animated.div
           className="text-justify about-us-holder-content p-8 w-full xl:w-5/12 absolute-r48-mt-1 xl:absolute order-2 xl:order-1"
           style={styles}
         >
-          <h3 className="mb-5 text-2xl">Jesteśmy tu, by pomóc!</h3>
-          <p className="mb-5 text-about">
-            Jako firma z kilkuletnim doświadczeniem, oferujemy szeroki wybór
-            sprzętu budowlanego: kołki, śruby, kątowniki, haki, rękawice i wiele
-            innych. Działamy zarówno na Allegro, jak i poprzez nasz sklep
-            internetowy, zapewniając wygodny dostęp do produktów, które spełnią
-            Twoje oczekiwania.
-          </p>
-          <p className="mb-5 text-about">
-            Dzięki współpracy z renomowanymi producentami, dostarczamy narzędzia
-            i akcesoria budowlane najwyższej jakości. Nasza oferta jest
-            skierowana do profesjonalistów i majsterkowiczów, którzy potrzebują
-            niezawodnego sprzętu do swoich projektów.
-          </p>
-          <p className="text-about">
-            Z nami zrealizujesz każdy projekt szybko i efektywnie – zawsze
-            stawiamy na jakość, szybki czas realizacji zamówienia i
-            konkurencyjne ceny. Sprawdź naszą ofertę i dołącz do grona
-            zadowolonych klientów!
-          </p>
+          <h3 className="mb-5 text-2xl">{t("starter2")}</h3>
+          <p className="mb-5 text-about">{t("paragraph1")}</p>
+          <p className="mb-5 text-about">{t("paragraph2")}</p>
+          <p className="text-about">{t("paragraph3")}</p>
         </animated.div>
 
         <div

@@ -2,13 +2,13 @@ import React from "react";
 import Chart from "react-apexcharts";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
+import { useTranslation } from "react-i18next";
 
 const BarChart: React.FC = () => {
   const { ref, inView } = useInView({
     threshold: 0.4,
     triggerOnce: true,
   });
-
 
   const createSpringStyles = (translateX: number, friction: number) =>
     useSpring({
@@ -48,6 +48,7 @@ const BarChart: React.FC = () => {
       data: [5700, 10000, 16000, 24000, 31000],
     },
   ];
+  const { t } = useTranslation();
 
   return (
     <section className="mt-20 flex overflow-hidden flex-col lg:flex-row">
@@ -71,31 +72,18 @@ const BarChart: React.FC = () => {
           className="text-xl font-semibold"
           style={createSpringStyles(150, 50)}
         >
-          Wykres zamówień RdR
+          {t("chartHeader")}
         </animated.div>
         <div className="flex text-justify pr-5 mt-5 flex-col chart-desc">
           <animated.p style={createSpringStyles(150, 50)}>
-            Nasz sklep internetowy dynamicznie rozwija się z każdym rokiem, a
-            dane pokazują stały wzrost sprzedaży. Wykres prezentuje różnicę w
-            liczbie zamówień rok do roku, co pozwala dokładnie zobaczyć, jak
-            skutecznie wdrożone strategie marketingowe oraz rozbudowa oferty
-            wpłynęły na rozwój. Analiza takich danych jest kluczowa dla
-            planowania przyszłych działań i optymalizacji procesów
-            sprzedażowych.
+            {t("chartP1")}
           </animated.p>
 
           <animated.p className="mt-5" style={createSpringStyles(250, 50)}>
-            Zwiększenie liczby zamówień rok do roku wskazuje, że klienci coraz
-            chętniej korzystają z naszych usług. Porównując wyniki z lat
-            poprzednich, możemy wyciągnąć wnioski dotyczące skuteczności
-            działań, takich jak kampanie reklamowe czy promocje sezonowe.
+            {t("chartP2")}
           </animated.p>
           <animated.p className="mt-5" style={createSpringStyles(300, 50)}>
-            Obserwowany wzrost potwierdza, że rozwój oferty i jakość obsługi
-            mają kluczowy wpływ na zadowolenie klientów. Dzięki temu, że stale
-            analizujemy dane, możemy lepiej przewidywać trendy zakupowe, co
-            pozwala nam utrzymać konkurencyjność na rynku e-commerce i oferować
-            jeszcze lepsze rozwiązania dla naszych użytkowników.
+            {t("chartP3")}
           </animated.p>
         </div>
       </div>

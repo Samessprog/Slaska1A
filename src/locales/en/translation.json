@@ -1,6 +1,52 @@
 {
-  "title": "We are here to help! Get to know us",
-  "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  "paragraph2": "Curabitur tincidunt metus ut velit aliquam, a ullamcorper libero dictum.",
-  "paragraph3": "Vivamus luctus nisi id odio cursus, nec malesuada erat varius."
+  "Navitem1": "Product Offer",
+  "Navitem2": "Store",
+  "Navitem3": "Allegro",
+  "Navitem4": "About Us",
+  "Navitem5": "Contact",
+  "Navitem6": "Catalog",
+
+  "title": "Learn more about us!",
+  "starter": "We are your trusted partner in construction and renovation. We offer the highest quality construction equipment that can handle any challenge!",
+  "starter2": "We are here to help!",
+  "paragraph1": "With several years of experience, we offer a wide range of construction equipment: anchors, screws, brackets, hooks, gloves, and much more. We operate both on Allegro and through our online store, providing convenient access to products that will meet your expectations.",
+  "paragraph2": "Thanks to our cooperation with renowned manufacturers, we deliver high-quality tools and construction accessories. Our offer is aimed at both professionals and DIY enthusiasts who need reliable equipment for their projects.",
+  "paragraph3": "With us, you will complete any project quickly and efficiently – we always focus on quality, fast order processing times, and competitive prices. Check out our offer and join the group of satisfied customers!",
+
+  "productHeader": "Check out our products",
+  "productItem1": "Quick installation dowels",
+  "productItem2": "Traditional fastening",
+  "productItem3": "Frame fastening",
+  "productItem4": "Door frame fastening",
+  "productItem5": "Wood screws",
+  "productItem6": "Anchors",
+  "productItem7": "Nails",
+  "productItem8": "Self-drilling screws",
+  "productItem9": "Roof screws",
+  "productItem10": "Carpentry connectors",
+  "productItem11": "Goliat system",
+  "productItem12": "Threaded connectors",
+  "productItem13": "Washers",
+  "productItem14": "Nuts",
+  "productItem15": "Blisters",
+  "productItem16": "Chemical anchors",
+  "productItem17": "Confirmats",
+
+  "opinion1": "I wholeheartedly recommend this store! The shopping process was fast and smooth, and the products arrived in perfect condition. Excellent quality, great customer service, and express shipping. I will definitely return for more purchases!",
+  "opinion2": "I am very satisfied with my purchases at this store! Everything went smoothly, the products arrived quickly and in perfect condition. The website is clear, and the purchase process is intuitive. I definitely recommend it to anyone looking for quality and professionalism!",
+  "opinion3": "Great service and very fast delivery! I ordered a few renovation tools, and they all arrived the next day. The products are really solid, and the prices are very competitive. I will definitely return for more purchases!",
+  "opinion4": "Definitely the best tool store I have ever shopped at. The products are of high quality, and the customer service is very helpful. The order processing time is lightning fast!",
+  "opinion5": "I highly recommend this store! They have all the necessary construction accessories, and the prices are really affordable. Very friendly service that quickly answers questions. I will definitely come back here!",
+  "opinion6": "Excellent service and professional advice! I ordered construction equipment, and everything was as described. Additionally, the helpful staff helped me choose the right accessories. I will definitely return for more products!",
+
+  "chartHeader": "Order Chart RdR",
+  "chartP1": "Our online store has been dynamically growing year by year, and the data shows a steady increase in sales. The chart presents the difference in the number of orders year by year, which allows us to see how effectively implemented marketing strategies and the expansion of our offer have influenced our growth. Analyzing such data is crucial for planning future actions and optimizing sales processes.",
+  "chartP2": "The increase in orders year by year indicates that customers are more and more eager to use our services. By comparing results from previous years, we can draw conclusions regarding the effectiveness of actions such as advertising campaigns or seasonal promotions.",
+  "chartP3": "The observed growth confirms that the development of the offer and the quality of service have a key impact on customer satisfaction. By continuously analyzing data, we can better predict purchasing trends, which allows us to remain competitive in the e-commerce market and offer even better solutions for our users.",
+
+  "mapHeader": "Find us",
+  "deliveryHeader": "Delivery methods",
+
+  "footerShortMenuItem1": "Shortcuts",
+  "footerShortMenuItem2": "Opening Hours"
 }

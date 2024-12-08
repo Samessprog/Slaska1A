@@ -1,6 +1,51 @@
 {
-  "title": "Jesteśmy tu, by pomagać! Zapoznaj się z nami",
-  "paragraph1": "Accumsan turpis, in sodales enim ultricies eu. Ut eget rutrum nunc.",
-  "paragraph2": "Nam ante elit, tincidunt viverra quam rhoncus, fermentum volutpat eros.",
-  "paragraph3": "Ut eget rutrum nunc. Nam ante elit, tincidunt viverra quam rhoncus."
+  "Navitem1": "Oferta produktów",
+  "Navitem2": "Sklep",
+  "Navitem3": "Allegro",
+  "Navitem4": "O firmie",
+  "Navitem5": "Kontakt",
+  "Navitem6": "Katalog",
+
+  "title": "Dowiedz się coś o nas!",
+  "starter": "Jesteśmy Twoim zaufanym partnerem w budowie i remoncie. Oferujemy najwyższej jakości sprzęt budowlany, który sprosta każdemu wyzwaniu!",
+  "starter2": "Jesteśmy tu, by pomóc!",
+  "paragraph1": "Jako firma z kilkuletnim doświadczeniem, oferujemy szeroki wybór sprzętu budowlanego: kołki, śruby, kątowniki, haki, rękawice i wiele innych. Działamy zarówno na Allegro, jak i poprzez nasz sklep internetowy, zapewniając wygodny dostęp do produktów, które spełnią Twoje oczekiwania.",
+  "paragraph2": "Dzięki współpracy z renomowanymi producentami, dostarczamy narzędzia i akcesoria budowlane najwyższej jakości. Nasza oferta jest skierowana do profesjonalistów i majsterkowiczów, którzy potrzebują niezawodnego sprzętu do swoich projektów.",
+  "paragraph3": "Z nami zrealizujesz każdy projekt szybko i efektywnie – zawsze stawiamy na jakość, szybki czas realizacji zamówienia i konkurencyjne ceny. Sprawdź naszą ofertę i dołącz do grona zadowolonych klientów!",
+
+  "productHeader": "Zapoznaj się z naszymi produktamia",
+  "productItem1": "Kołki szybkiego montażu",
+  "productItem2": "Mocowanie tradycyjne",
+  "productItem3": "Mocowanie ramowe",
+  "productItem4": "Mocowanie osnieznic",
+  "productItem5": "Wkręty do drewna",
+  "productItem6": "Kotwy",
+  "productItem7": "Gwozdzie",
+  "productItem8": "Wkręty samowiercące",
+  "productItem9": "Wkręty do dachu",
+  "productItem10": "Złącza ciesielskie",
+  "productItem11": "System Goliat",
+  "productItem12": "Łączniuki gwintowe",
+  "productItem13": "Podkładki",
+  "productItem14": "Nakrętki",
+  "productItem15": "Blistry",
+  "productItem16": "Kotwy Chemiczne",
+  "productItem17": "konfirmatye",
+
+  "opinion1": "Z całego serca polecam ten sklep! Zakupy przebiegły szybko i sprawnie, a produkty dotarły w idealnym stanie. Świetna jakość, doskonały kontakt z obsługą klienta i ekspresowa wysyłka. Na pewno wrócę na kolejne zakupy!",
+  "opinion2": "Jestem bardzo zadowolony z zakupów w tym sklepie! Wszystko przebiegło sprawnie, produkty dotarły szybko i w doskonałym stanie. Strona jest przejrzysta, a proces zakupu intuicyjny. Zdecydowanie polecam wszystkim, którzy szukają jakości i profesjonalizmu!",
+  "opinion3": "Świetna obsługa i bardzo szybka dostawa! Zamówiłem kilka narzędzi do remontu, a wszystkie dotarły następnego dnia. Produkty są naprawdę solidne, a ceny bardzo konkurencyjne. Na pewno wrócę po kolejne zakupy!",
+  "opinion4": "Zdecydowanie najlepszy sklep z narzędziami, w jakim kiedykolwiek robiłem zakupy. Produkty są wysokiej jakości, a obsługa klienta bardzo pomocna. Czas realizacji zamówienia jest błyskawiczny!",
+  "opinion5": "Bardzo polecam ten sklep! Znajdują się tu wszystkie niezbędne akcesoria budowlane, a ceny są naprawdę przystępne. Bardzo miła obsługa, która szybko odpowiada na pytania. Zdecydowanie tu wrócę!",
+  "opinion6": "Doskonała obsługa i profesjonalne doradztwo! Zamówiłem sprzęt do budowy i wszystko było zgodne z opisem. Dodatkowo pomocna obsługa, która pomogła mi dobrać odpowiednie akcesoria. Na pewno wrócę po kolejne produkty!",
+
+  "chartP1": "Nasz sklep internetowy dynamicznie rozwija się z każdym rokiem, a dane pokazują stały wzrost sprzedaży. Wykres prezentuje różnicę w liczbie zamówień rok do roku, co pozwala dokładnie zobaczyć, jak skutecznie wdrożone strategie marketingowe oraz rozbudowa oferty wpłynęły na rozwój. Analiza takich danych jest kluczowa dla planowania przyszłych działań i optymalizacji procesów sprzedażowych.",
+  "chartP2": "Zwiększenie liczby zamówień rok do roku wskazuje, że klienci coraz chętniej korzystają z naszych usług. Porównując wyniki z lat poprzednich, możemy wyciągnąć wnioski dotyczące skuteczności działań, takich jak kampanie reklamowe czy promocje sezonowe.",
+  "chartP3": "Obserwowany wzrost potwierdza, że rozwój oferty i jakość obsługi mają kluczowy wpływ na zadowolenie klientów. Dzięki temu, że stale analizujemy dane, możemy lepiej przewidywać trendy zakupowe, co pozwala nam utrzymać konkurencyjność na rynku e-commerce i oferować jeszcze lepsze rozwiązania dla naszych użytkowników.",
+
+  "mapHeader": "Znajdz nas",
+  "deliveryHeader":"Sposoby dostawy",
+
+  "footerShortMenuItem1": "Na skróty",
+  "footerShortMenuItem2": "Godziny otwarcia"
 }

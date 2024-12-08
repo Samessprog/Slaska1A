@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import Rating from "@mui/material/Rating";
-
+import { useTranslation } from "react-i18next";
 interface Settings {
   dots: boolean;
   infinite: boolean;
@@ -47,6 +47,8 @@ function SamplePrevArrow(props) {
 }
 
 const Opinions: React.FC = () => {
+  const { t } = useTranslation();
+
   const settings: Settings = {
     dots: false,
     infinite: true,
@@ -89,12 +91,7 @@ const Opinions: React.FC = () => {
       <div className="slider-container ">
         <Slider {...settings}>
           <div className="slide text-justify">
-            <p>
-              Z całego serca polecam ten sklep! Zakupy przebiegły szybko i
-              sprawnie, a produkty dotarły w idealnym stanie. Świetna jakość,
-              doskonały kontakt z obsługą klienta i ekspresowa wysyłka. Na pewno
-              wrócę na kolejne zakupy!
-            </p>
+            <p>{t("opinion1")}</p>
             <div className="mt-5">
               ~ Karolina K.
               <div>
@@ -109,13 +106,7 @@ const Opinions: React.FC = () => {
           </div>
 
           <div className="slide text-justify">
-            <p>
-              Jestem bardzo zadowolony z zakupów w tym sklepie! Wszystko
-              przebiegło sprawnie, produkty dotarły szybko i w doskonałym
-              stanie. Strona jest przejrzysta, a proces zakupu intuicyjny.
-              Zdecydowanie polecam wszystkim, którzy szukają jakości i
-              profesjonalizmu!
-            </p>
+            <p>{t("opinion2")}</p>
             <div className="mt-5">
               ~ Karolina K.
               <div>
@@ -130,13 +121,7 @@ const Opinions: React.FC = () => {
           </div>
 
           <div className="slide text-justify">
-            <p>
-              Jestem bardzo zadowolony z zakupów w tym sklepie! Wszystko
-              przebiegło sprawnie, produkty dotarły szybko i w doskonałym
-              stanie. Strona jest przejrzysta, a proces zakupu intuicyjny.
-              Zdecydowanie polecam wszystkim, którzy szukają jakości i
-              profesjonalizmu!
-            </p>
+            <p>{t("opinion3")}</p>
             <div className="mt-5">
               ~ Karolina K.
               <div>
@@ -151,12 +136,7 @@ const Opinions: React.FC = () => {
           </div>
 
           <div className="slide text-justify">
-            <p>
-              Świetna obsługa i bardzo szybka dostawa! Zamówiłem kilka narzędzi
-              do remontu, a wszystkie dotarły następnego dnia. Produkty są
-              naprawdę solidne, a ceny bardzo konkurencyjne. Na pewno wrócę po
-              kolejne zakupy!
-            </p>
+            <p>{t("opinion4")}</p>
             <div className="mt-5">
               ~ Michał R.
               <div>
@@ -171,11 +151,7 @@ const Opinions: React.FC = () => {
           </div>
 
           <div className="slide text-justify">
-            <p>
-              Zdecydowanie najlepszy sklep z narzędziami, w jakim kiedykolwiek
-              robiłem zakupy. Produkty są wysokiej jakości, a obsługa klienta
-              bardzo pomocna. Czas realizacji zamówienia jest błyskawiczny!
-            </p>
+            <p>{t("opinion5")}</p>
             <div className="mt-5">
               ~ Andrzej S.
               <div>
@@ -190,33 +166,9 @@ const Opinions: React.FC = () => {
           </div>
 
           <div className="slide text-justify">
-            <p>
-              Bardzo polecam ten sklep! Znajdują się tu wszystkie niezbędne
-              akcesoria budowlane, a ceny są naprawdę przystępne. Bardzo miła
-              obsługa, która szybko odpowiada na pytania. Zdecydowanie tu wrócę!
-            </p>
+            <p>{t("opinion6")}</p>
             <div className="mt-5">
               ~ Anna W.
-              <div>
-                <Rating
-                  name="half-rating-read"
-                  defaultValue={5}
-                  precision={5}
-                  readOnly
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="slide text-justify">
-            <p>
-              Doskonała obsługa i profesjonalne doradztwo! Zamówiłem sprzęt do
-              budowy i wszystko było zgodne z opisem. Dodatkowo pomocna obsługa,
-              która pomogła mi dobrać odpowiednie akcesoria. Na pewno wrócę po
-              kolejne produkty!
-            </p>
-            <div className="mt-5">
-              ~ Tomasz K.
               <div>
                 <Rating
                   name="half-rating-read"

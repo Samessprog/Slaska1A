@@ -4,6 +4,7 @@ import Navbar from "./GeneralComponents/Navbar";
 import Footer from "./GeneralComponents/Footer";
 import Main from "./Pages/Mian";
 import { Link, Route, Routes } from "react-router-dom";
+import './i18n'; 
 
 function App() {
   const [currentWindowWith, setCurrentWindowWith] = useState<number>(

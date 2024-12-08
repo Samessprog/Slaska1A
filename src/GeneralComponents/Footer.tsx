@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import footerLogo from "../assets/logoFooter.png";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="footer-holder w-full text-white" id="footer">
       <div className="xl:pt-10">
@@ -49,7 +51,7 @@ const Footer = () => {
           <div className="xl:w-2/12 pt-5 xl:pt-0">
             <div>
               <header className="text-base sm:text-xl xl:text-base">
-                <h2>Na skróty</h2>
+                <h2>{t("footerShortMenuItem1")}</h2>
               </header>
             </div>
             <ul className="text-sm text-[#AAAAB1]">
@@ -58,7 +60,7 @@ const Footer = () => {
                   href="#productContext"
                   className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm sm:text-sm xl:text-xs"
                 >
-                  Oferta produktów
+                  {t("Navitem1")}
                 </a>
               </li>
               <li className="mt-2">
@@ -67,7 +69,7 @@ const Footer = () => {
                   target="_blank"
                   className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm xl:text-xs"
                 >
-                  Sklep
+                  {t("Navitem2")}
                 </Link>
               </li>
               <li className="mt-2">
@@ -76,7 +78,7 @@ const Footer = () => {
                   target="_blank"
                   className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300 text-sm  xl:text-xs"
                 >
-                  Allego
+                  {t("Navitem3")}
                 </Link>
               </li>
               <li className="mt-2">
@@ -84,7 +86,7 @@ const Footer = () => {
                   href="#aboutUs"
                   className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  xl:text-xs"
                 >
-                  O nas
+                  {t("Navitem4")}
                 </a>
               </li>
               <li className="mt-2">
@@ -92,24 +94,23 @@ const Footer = () => {
                   href="#footer"
                   className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  xl:text-xs"
                 >
-                  Kontakt
+                  {t("Navitem5")}
                 </a>
               </li>
               <li className="mt-2">
-                <Link
-                  to="https://allegro.pl/uzytkownik/Elektrokoncept"
-                  target="_blank"
+                <a
+                  href="#footer"
                   className="mb-2 hover:text-white focus:text-white  cursor-pointer transition ease-in-out duration-300  xl:text-xs"
                 >
-                  Allegro
-                </Link>
+                  {t("Navitem6")}
+                </a>
               </li>
             </ul>
           </div>
           <div className="xl:w-2/12 pt-5 xl:pt-0">
             <div>
               <header className="text-base sm:text-xl xl:text-base">
-                <h2>Godziny otwarcia</h2>
+                <h2>{t("footerShortMenuItem2")}</h2>
               </header>
             </div>
             <ul className="text-[#AAAAB1] mt-2">
@@ -153,7 +154,7 @@ const Footer = () => {
           <div className="xl:w-2/12 flex flex-col xl:items-start items-center pt-5 xl:pt-0">
             <div className="text-lg">
               <header className="text-base sm:text-2xl xl:text-base">
-                <h2>Kontakt</h2>
+                <h2>{t("Navitem5")}</h2>
               </header>
             </div>
             <ul className="mt-3 text-[#AAAAB1]">
