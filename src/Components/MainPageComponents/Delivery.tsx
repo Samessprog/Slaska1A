@@ -7,8 +7,11 @@ import orlenLogo from "../../assets/deliveryIcons/Orlen.png";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Delivery: React.FC = () => {
+  const { t } = useTranslation();
+
   const { ref, inView } = useInView({
     threshold: 1,
     triggerOnce: true,
@@ -27,7 +30,7 @@ const Delivery: React.FC = () => {
         ref={ref}
       >
         {" "}
-        <em>Sposoby dostawy</em>
+        <em>{t("deliveryHeader")}</em>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="40px"

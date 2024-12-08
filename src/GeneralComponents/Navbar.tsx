@@ -1,12 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import logoIcon from "../assets/logo.png";
+import { useTranslation } from "react-i18next";
 
 interface NavbarProps {
   currentWindowWith: number;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
+  const { t, i18n } = useTranslation();
+
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selectedLanguage, setSelectedLanguage] = useState<string>("Pol");
   const [isOpenHamburger, setIsOpenHamburger] = useState<boolean>(false);
@@ -14,8 +17,12 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
-  const changeLanguage = (language: string): void => {
+  const changeLanguage = (
+    language: string,
+    toTranslateLanguage: string
+  ): void => {
     setSelectedLanguage(language);
+    i18n.changeLanguage(toTranslateLanguage);
     setIsOpen(false);
   };
 
@@ -89,7 +96,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
               }`}
             >
               <a className="scroll-smooth" href="#productContext">
-                Oferta produktów
+                {t("Navitem1")}
               </a>
             </li>
             <li
@@ -98,7 +105,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
               }`}
             >
               <Link to="https://slaska1a.pl/" target="_blank">
-                Sklep
+                {t("Navitem2")}
               </Link>
             </li>
             <li
@@ -110,7 +117,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
                 to="https://allegro.pl/uzytkownik/Elektrokoncept"
                 target="_blank"
               >
-                Allegro
+                {t("Navitem3")}
               </Link>
             </li>
             <li
@@ -119,7 +126,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
               }`}
             >
               <a className="scroll-smooth" href="#aboutUs">
-                O firmie
+                {t("Navitem4")}
               </a>
             </li>
             <li
@@ -127,7 +134,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
                 isOpenHamburger ? "w-11/12" : ""
               }`}
             >
-              <a href="#footer">Kontakt</a>
+              <a href="#footer">{t("Navitem5")}</a>
             </li>
             <li
               className={`list-item relative ${
@@ -138,7 +145,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
                 to="https://slaska1a.pl/pl/i/Regulamin-sklepu/18"
                 target="_blank"
               >
-                Katalog
+                {t("Navitem6")}
               </Link>
             </li>
           </ul>
@@ -182,14 +189,14 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
                   aria-labelledby="options-menu"
                 >
                   <button
-                    onClick={() => changeLanguage("Pol")}
+                    onClick={() => changeLanguage("Pol", "pl")}
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-gray-900"
                     role="menuitem"
                   >
                     🇵🇱 Polish (Pol)
                   </button>
                   <button
-                    onClick={() => changeLanguage("Eng")}
+                    onClick={() => changeLanguage("Eng", "en")}
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-gray-900"
                     role="menuitem"
                   >

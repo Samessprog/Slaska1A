@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 import AboutUS from "../Components/MainPageComponents/AboutUs";
 import Summary from "../Components/MainPageComponents/Summary";
 import { PropagateLoader } from "react-spinners";
+import { useTranslation } from "react-i18next";
 //Lazy imports
 const MainSlider = lazy(
   () => import("../Components/MainPageComponents/MainSlider")
@@ -20,6 +21,7 @@ const ProductMain = lazy(
 );
 
 const Main: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Suspense
@@ -76,7 +78,7 @@ const Main: React.FC = () => {
           <div className="mb-10 flex justify-center">
             <h2 className="text-3xl font-semibold">
               {" "}
-              <em>Znajdz nas</em>
+              <em>{t("mapHeader")}</em>
             </h2>
             <svg
               xmlns="http://www.w3.org/2000/svg"
