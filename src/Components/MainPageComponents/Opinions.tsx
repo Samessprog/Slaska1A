@@ -85,7 +85,7 @@ const Opinions: React.FC = () => {
       <div className="text-3xl font-semibold mb-10">
         <h2>
           {" "}
-          <em>Jak widzą nas inni</em>
+          <em>{t("opinionHeader")}</em>
         </h2>
       </div>
       <div className="slider-container ">
