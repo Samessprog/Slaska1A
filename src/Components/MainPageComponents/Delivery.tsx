@@ -1,9 +1,9 @@
 import React from "react";
-import DPDLogo from "../../assets/deliveryIcons/DPD.png";
-import pocztaLogo from "../../assets/deliveryIcons/poczta.png";
-import allegroLogo from "../../assets/deliveryIcons/6lJEwSSohvBIIWNlJUU9sx-w1200-h1200.png";
-import inpostLogo from "../../assets/deliveryIcons/Inpost.png";
-import orlenLogo from "../../assets/deliveryIcons/Orlen.png";
+import DPDLogo from "../../assets/deliveryIcons/DPD.webp";
+import pocztaLogo from "../../assets/deliveryIcons/poczta.webp";
+import allegroLogo from "../../assets/deliveryIcons/6lJEwSSohvBIIWNlJUU9sx-w1200-h1200.webp";
+import inpostLogo from "../../assets/deliveryIcons/Inpost.webp";
+import orlenLogo from "../../assets/deliveryIcons/Orlen.webp";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
 import { Link } from "react-router-dom";

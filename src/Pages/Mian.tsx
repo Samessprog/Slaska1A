@@ -96,6 +96,7 @@ const Main: React.FC = () => {
             className="w-full"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
+            title="Google map"
           ></iframe>
         </section>
         <Suspense

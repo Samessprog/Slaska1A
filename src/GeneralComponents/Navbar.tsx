@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import logoIcon from "../assets/logo.png";
+import logoIcon from "../assets/logo.webp";
 import { useTranslation } from "react-i18next";
 
 interface NavbarProps {
@@ -57,8 +57,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
     <nav className="flex justify-center top-0 left-0 sticky">
       <div className="flex justify-between items-center navbar-holder w-full pt-2 pl-4 pr-4 pb-2 bg-white">
         <div className="w-3/12 order-2">
-          <Link to="/">
-            <img src={logoIcon} />
+          <Link to="/" aria-label="main page link">
+            <img src={logoIcon} alt="loading error" />
           </Link>
         </div>
 
