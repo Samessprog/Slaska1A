@@ -1,11 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
 import BrandContext from "./BrandContext";
-import t from "../../assets/brandsLogos/0logo1.png";
-import domaxLogo from "../../assets/brandsLogos/mini_press_domax.png";
-import klimas from "../../assets/brandsLogos/klimas.png";
-import magKrak from "../../assets/brandsLogos/Magkrak.png";
-import fisher from "../../assets/brandsLogos/0logo5.png";
+import t from "../../assets/brandsLogos/0logo1 (1).webp";
+import domaxLogo from "../../assets/brandsLogos/mini_press_domax.webp";
+import klimas from "../../assets/brandsLogos/klimas.webp";
+import magKrak from "../../assets/brandsLogos/Magkrak.webp";
+import fisher from "../../assets/brandsLogos/0logo5.webp";
 
 interface BrandInterface {
   dots: boolean;

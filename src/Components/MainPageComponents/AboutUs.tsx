@@ -2,7 +2,7 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
-import usCompoanyImg from "../../assets//2024.jpg";
+import usCompoanyImg from "../../assets/2024.webp";
 
 const AboutUS = () => {
   const { t } = useTranslation();
@@ -17,6 +17,7 @@ const AboutUS = () => {
     transform: inView ? "translateX(0px)" : "translateX(-200px)",
     config: { mass: 5, tension: 100, friction: 55 },
   });
+
 
   return (
     <section
@@ -35,7 +36,7 @@ const AboutUS = () => {
           className="text-justify about-us-holder-content p-8 w-full xl:w-5/12 absolute-r48-mt-1 xl:absolute order-2 xl:order-1"
           style={styles}
         >
-          <h3 className="mb-5 text-2xl">{t("starter2")}</h3>
+          <h2 className="mb-5 text-2xl">{t("starter2")}</h2>
           <p className="mb-5 text-about">{t("paragraph1")}</p>
           <p className="mb-5 text-about">{t("paragraph2")}</p>
           <p className="text-about">{t("paragraph3")}</p>

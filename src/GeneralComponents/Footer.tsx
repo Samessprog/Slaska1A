@@ -206,7 +206,7 @@ const Footer = () => {
           <div className="xl:w-3/12 flex flex-col items-end pt-10 xl:pt-0 items-center">
             <div className="flex w-full justify-center items-center flex-col xl:flex-row">
               <div className="flex mb-10 ">
-                <Link>
+                <Link aria-label="Visit facebook">
                   <div className="flex justify-center mr-5 footer-icon-border footer-icon-holder">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +223,7 @@ const Footer = () => {
                   </div>
                 </Link>
 
-                <Link>
+                <Link aria-label="Visit shop">
                   <div className="flex justify-center mr-5 footer-icon-border footer-icon-holder">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -236,7 +236,7 @@ const Footer = () => {
                     </svg>
                   </div>
                 </Link>
-                <Link>
+                <Link aria-label="Visit google map">
                   <div className="flex justify-center mr-5 footer-icon-border footer-icon-holder">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -251,7 +251,7 @@ const Footer = () => {
                 </Link>
               </div>
               <div className=" flex justify-center allegro-icon h-full mt-0 xl:mt-4">
-                <Link>
+                <Link aria-label="Visit allegro">
                   <svg
                     className="w-[130px] h-[45px] sm:w-[200px] sm:h-[90px] xl:w-[120px] xl:h-[40px] allegro-icon"
                     viewBox="0 0 145 50"
@@ -263,7 +263,7 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="flex justify-end items-end mt-10 img-logo-holder w-full">
+            <div className="flex justify-end items-end mt-10 img-logo-holder w-full overflow-hidden">
               <img
                 src={footerLogo}
                 alt="loading err"
