@@ -9,7 +9,9 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ img, children }) => {
   return (
     <Link className="product-container w-full p-6 flex items-center mb-3 ml-2 mr-2">
-      <img src={img} alt="loading err" />
+      <div>
+        <img src={img} alt="loading err" className="w-full h-full" />
+      </div>
       <div className="text-lg ml-3 text-center w-full">{children}</div>
     </Link>
   );
