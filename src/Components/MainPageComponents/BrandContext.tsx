@@ -3,7 +3,14 @@ import React from "react";
 const BrandContext: React.FC = ({ logoImg }) => {
   return (
     <div className="brand-holder rounded-md cursor-pointer">
-      <img src={logoImg} alt="loading error" className="brand-img" />
+      <div>
+        <img
+          src={logoImg}
+          alt="loading error"
+          loading="lazy"
+          className="brand-img w-full h-full"
+        />
+      </div>
     </div>
   );
 };
