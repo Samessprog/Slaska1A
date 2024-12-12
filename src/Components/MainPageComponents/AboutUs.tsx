@@ -13,7 +13,7 @@ const AboutUS = () => {
   });
 
   const styles = useSpring({
-    // opacity: inView ? 1 : 0,
+    opacity: inView ? 1 : 0,
     transform: inView ? "translateX(0px)" : "translateX(-200px)",
     config: { mass: 5, tension: 100, friction: 55 },
   });
@@ -21,7 +21,7 @@ const AboutUS = () => {
 
   return (
     <section
-      className="w-full flex md:pl-5 md:pr-5 pl-2 pr-2 mt-20 height-800 flex-col justify-start"
+      className="w-full flex md:pl-5 md:pr-5 pl-2 pr-2 mt-20 height-800 flex-col justify-start about-us-hlder"
       id="aboutUs"
     >
       <div className="text-3xl font font-semibold ">
