@@ -1,10 +1,10 @@
-import Button from "../Components/Button";
-
+import React from 'react';
+import { Button } from './Button';
 
 export default {
-  title: "Components/Navbar", 
-  component: Button, 
+  title: 'Button',  
+  component: Button,
 };
 
-export const Red = () => <Button label="Press" background="red" />;
-export const Blue = () => <Button label="Press" background="blue" />;
+export const Default = () => <Button label="Click me" />;
+export const Custom = () => <Button label="Custom Button" onClick={() => alert('Button clicked!')} />;
