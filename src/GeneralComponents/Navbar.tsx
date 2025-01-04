@@ -1,7 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import logoIcon from "../assets/logo.webp";
 import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  setIsOpen,
+  setSelectedLanguage,
+  setIsOpenHamburger,
+  setIsClicked,
+} from "../states/navbarSlice";
+import { RootState } from "../states/store";
 
 interface NavbarProps {
   currentWindowWith: number;
@@ -10,20 +18,29 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
   const { t, i18n } = useTranslation();
 
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("Pol");
-  const [isOpenHamburger, setIsOpenHamburger] = useState<boolean>(false);
-  const [isClicked, setIsClicked] = useState<boolean>(false);
+  const dispatch = useDispatch();
 
-  const toggleDropdown = () => setIsOpen(!isOpen);
+  const isOpen = useSelector((state: RootState) => state.navbarStates.isOpen);
+  const isClicked = useSelector(
+    (state: RootState) => state.navbarStates.isClicked
+  );
+  const selectedLanguage = useSelector(
+    (state: RootState) => state.navbarStates.selectedLanguage
+  );
+
+  const isOpenHamburger = useSelector(
+    (state: RootState) => state.navbarStates.isOpenHamburger
+  );
+
+  const toggleDropdown = () => dispatch(setIsOpen(!isOpen));
 
   const changeLanguage = (
     language: string,
     toTranslateLanguage: string
   ): void => {
-    setSelectedLanguage(language);
+    dispatch(setSelectedLanguage(language));
     i18n.changeLanguage(toTranslateLanguage);
-    setIsOpen(false);
+    dispatch(setIsOpen(false));
   };
 
   const dropDownMenuLang = useRef();
@@ -35,14 +52,14 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
       dropDownMenuLang.current &&
       !dropDownMenuLang.current.contains(event.target)
     ) {
-      setIsOpen(false);
+      dispatch(setIsOpen(false));
     }
   };
 
   useEffect(() => {
     if (currentWindowWith > 768) {
-      setIsClicked(false);
-      setIsOpenHamburger(false);
+      dispatch(setIsClicked(false));
+      dispatch(setIsOpenHamburger(false));
     }
   }, [currentWindowWith]);
 
@@ -73,8 +90,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
             isOpenHamburger ? "open" : "close"
           }`}
           onClick={() => {
-            setIsOpenHamburger(!isOpenHamburger);
-            setIsClicked(true);
+            dispatch(setIsOpenHamburger(!isOpenHamburger));
+            dispatch(setIsClicked(true));
           }}
         >
           <ul>
