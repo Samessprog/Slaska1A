@@ -3,6 +3,7 @@ import AboutUS from "../Components/MainPageComponents/AboutUs";
 import Summary from "../Components/MainPageComponents/Summary";
 import { PropagateLoader } from "react-spinners";
 import { useTranslation } from "react-i18next";
+import FirebaseTest from "../Components/FirebaseTest";
 
 //Lazy imports
 const MainSlider = lazy(
@@ -109,6 +110,7 @@ const Main: React.FC = () => {
         >
           <Delivery />
         </Suspense>
+        <FirebaseTest />
       </div>
       <Summary />
     </>
