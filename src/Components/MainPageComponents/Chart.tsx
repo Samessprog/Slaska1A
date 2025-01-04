@@ -3,19 +3,12 @@ import Chart from "react-apexcharts";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
-import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement } from "../../states/actions";
 
 const BarChart: React.FC = () => {
   const { ref, inView } = useInView({
     threshold: 0.4,
     triggerOnce: true,
   });
-
-  const count = useSelector((state) => state.count);
-  const dispatch = useDispatch();
-
-  console.log(count);
 
   const createSpringStyles = (translateX: number, friction: number) =>
     useSpring({
@@ -59,12 +52,6 @@ const BarChart: React.FC = () => {
 
   return (
     <section className="mt-20 flex overflow-hidden flex-col lg:flex-row">
-      <div>
-        <h1>Count: {count}</h1>
-        <button onClick={() => dispatch(increment())}>+</button>
-        <button onClick={() => dispatch(decrement())}>-</button>
-      </div>
-
       <div className="flex w-full lg:w-6/12 justify-center" ref={ref}>
         <Chart
           options={options}

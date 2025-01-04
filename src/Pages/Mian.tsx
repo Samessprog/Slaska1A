@@ -3,6 +3,7 @@ import AboutUS from "../Components/MainPageComponents/AboutUs";
 import Summary from "../Components/MainPageComponents/Summary";
 import { PropagateLoader } from "react-spinners";
 import { useTranslation } from "react-i18next";
+
 //Lazy imports
 const MainSlider = lazy(
   () => import("../Components/MainPageComponents/MainSlider")
