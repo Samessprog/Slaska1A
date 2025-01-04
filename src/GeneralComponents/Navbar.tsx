@@ -43,14 +43,12 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
     dispatch(setIsOpen(false));
   };
 
-  const dropDownMenuLang = useRef();
+  const dropDownMenuLang = useRef<HTMLDivElement>(null);
 
-  const handleClickOutside = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ): void => {
+  const handleClickOutside = (event: MouseEvent): void => {
     if (
       dropDownMenuLang.current &&
-      !dropDownMenuLang.current.contains(event.target)
+      !dropDownMenuLang.current.contains(event.target as Node)
     ) {
       dispatch(setIsOpen(false));
     }
@@ -61,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentWindowWith }) => {
       dispatch(setIsClicked(false));
       dispatch(setIsOpenHamburger(false));
     }
-  }, [currentWindowWith]);
+  }, [currentWindowWith, dispatch]);
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
