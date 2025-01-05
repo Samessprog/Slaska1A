@@ -5,23 +5,19 @@ import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 import headerImg from "../assets/ProductsPage/0strona-merge.png";
 import ProductCard from "../Components/ProductsComponents/ProductCard";
+import { useDispatch, useSelector } from "react-redux";
+import { setProductsDB } from "../states/productSlice";
 
 import konfirmaty from "../assets/productIcons/LacznikiGwintowe.webp";
-
-type Product = {
-  ID_Product: number;
-  Product_Brand: string;
-  Product_Desc: string;
-  Product_Type: string;
-  Product_Img: string;
-  Product_Name: string;
-};
+import { RootState } from "../states/store";
 
 const Products = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-
-  const [productsDB, setProductsDB] = useState<Record<string, Product>>(null);
+  const productsDB = useSelector(
+    (state: RootState) => state.productStates.productsDB
+  );
+  const dispach = useDispatch();
 
   if (!id || id === "undefined" || id === "null") {
     navigate("/");
@@ -39,7 +35,7 @@ const Products = () => {
       try {
         const snapshot = await get(dataRef);
         if (snapshot.exists()) {
-          setProductsDB(snapshot.val());
+          dispach(setProductsDB(snapshot.val()));
         } else {
           alert("Nie znaleziono produktów!");
           navigate("/");
@@ -53,7 +49,7 @@ const Products = () => {
   }, []);
 
   if (!productsDB) {
-    return <div>Ładowanie...</div>; // Ekran ładowania
+    return <div>Ładowanie...</div>;
   }
 
   const {
