@@ -44,13 +44,15 @@ const ProductMain: React.FC = () => {
       </div>
       <div className="flex justify-center">
         <div className="w-11/12 grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-1 sm:gap-4 pl-2 pr-6 mt-10">
-          <ProductCard img={KPRFAST}>{t("productItem1")}</ProductCard>
+          <ProductCard id="Kolki" img={KPRFAST}>
+            {t("productItem1")}
+          </ProductCard>
           <ProductCard img={MocowanieTradycyjneLogo}>
-          {t("productItem2")}
+            {t("productItem2")}
           </ProductCard>
           <ProductCard img={MocowanieRamowe}>{t("productItem3")}</ProductCard>
           <ProductCard img={MocowanieOscieznic}>
-          {t("productItem4")}c
+            {t("productItem4")}c
           </ProductCard>
           <ProductCard img={DoDrewna}>{t("productItem5")}</ProductCard>
           <ProductCard img={Kotwy}>{t("productItem6")}</ProductCard>

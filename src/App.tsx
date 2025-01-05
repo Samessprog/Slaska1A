@@ -3,8 +3,9 @@ import "./App.css";
 import Navbar from "./GeneralComponents/Navbar";
 import Footer from "./GeneralComponents/Footer";
 import Main from "./Pages/Mian";
+import Products from "./Pages/Products";
 import { Link, Route, Routes } from "react-router-dom";
-import './i18n'; 
+import "./i18n";
 
 function App() {
   const [currentWindowWith, setCurrentWindowWith] = useState<number>(
@@ -53,6 +54,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/Produkty/:id" element={<Products />} />
+        <Route path="*" element={<Main />} />
       </Routes>
 
       {isVisible && (
