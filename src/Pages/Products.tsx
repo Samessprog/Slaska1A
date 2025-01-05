@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, Suspense } from "react";
 import { database } from "../../firebase";
 import { ref, get, query, orderByChild, equalTo } from "firebase/database";
 import { useParams } from "react-router";
@@ -7,7 +7,7 @@ import headerImg from "../assets/ProductsPage/0strona-merge.png";
 import ProductCard from "../Components/ProductsComponents/ProductCard";
 import { useDispatch, useSelector } from "react-redux";
 import { setProductsDB } from "../states/productSlice";
-
+import { PropagateLoader } from "react-spinners";
 import konfirmaty from "../assets/productIcons/LacznikiGwintowe.webp";
 import { RootState } from "../states/store";
 
@@ -49,7 +49,7 @@ const Products = () => {
   }, []);
 
   if (!productsDB) {
-    return <div>Ładowanie...</div>;
+    return <div>{PropagateLoader}</div>;
   }
 
   const {
@@ -65,24 +65,35 @@ const Products = () => {
   } = productsDB.Product_1 || {};
 
   return (
-    <div>
+    <div className="mb-20 ">
+      <Suspense fallback={<div>{PropagateLoader}</div>}>
+        <section>
+          <div className="relative img-header-holder">
+            <img
+              alt="loading error"
+              src={headerImg}
+              className="object-cover w-full h-full"
+            />
+            <span className="absolute product-header-text text-4xl text-white font-semibold">
+              OFERTA PRODUKTÓW
+            </span>
+          </div>
+        </section>
+      </Suspense>
+
       <section>
-        <div className="relative img-header-holder">
-          <img
-            alt="loading error"
-            src={headerImg}
-            className="object-cover w-full h-full"
-          />
-          <span className="absolute product-header-text text-4xl text-white font-semibold">
-            OFERTA PRODUKTÓW
-          </span>
+        <div className="mt-20 text-4xl font-semibold">
+          <em>Nasze {Product_Type}</em>
         </div>
-      </section>
-      <section>
-        <div>{Product_Type}</div>
         <div className="flex justify-center items-center">
           <div className="w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 sm:gap-4 pl-2 pr-6 mt-10">
-            <ProductCard img={konfirmaty}></ProductCard>
+            <ProductCard
+              short_Description={Short_Desc}
+              product_name={Product_Name}
+              product_brand={Product_Brand}
+              product_type={Product_Type}
+              img={konfirmaty}
+            ></ProductCard>
           </div>
         </div>
       </section>

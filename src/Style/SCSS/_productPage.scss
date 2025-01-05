@@ -9,3 +9,44 @@
         letter-spacing: 2px;
     }
 }
+
+.product-card {
+    border: 2px solid rgba(185, 185, 185, 0.527);
+    border-bottom: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all ease-in-out .3s;
+
+    &:hover {
+        box-shadow: 4px 1px 8px 1px rgba(0, 0, 0, 0.55);
+
+    }
+
+
+    .product-desc {
+        border-top: 1px solid rgb(185, 185, 185);
+        max-height: 100px;
+        overflow-Y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+            background-color: #eeeeee;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 10px;
+
+        }
+    }
+
+    .product-button {
+        background-color: rgb(254, 69, 69);
+        font-size: 17px;
+        transition: all ease-in-out .3s;
+
+        &:hover {
+            background-color: rgb(255, 27, 27);
+        }
+    }
+}
