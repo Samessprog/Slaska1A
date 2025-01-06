@@ -9,8 +9,8 @@ const ProductCard = ({
   product_name,
 }) => {
   return (
-    <div className="shadow-card">
-      <div className="product-card">
+    <div className="shadow-card overflow-hidden">
+      <div className="product-card overflow-hidden">
         <figure>
           <Suspense
             fallback={
@@ -19,7 +19,8 @@ const ProductCard = ({
           >
             <img src={img} alt="loading err" />
           </Suspense>
-          <figcaption className="text-justify product-desc pl-1 pr-1 pt-2 mb-2">
+
+          <figcaption className="text-justify product-desc pl-1 pr-1 pt-2 mb-2 overflow-y-scroll">
             <em className="font-semibold">{product_name}</em> -{" "}
             {short_Description}
           </figcaption>
