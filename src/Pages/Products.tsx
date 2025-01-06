@@ -64,7 +64,7 @@ const Products = () => {
         fallback={<div className="products-loader">{<PropagateLoader />}</div>}
       >
         <section>
-          <div className="relative img-header-holder">
+          <div className="relative img-header-holder overflow-hidden">
             <img
               alt="loading error"
               src={headerImg}
