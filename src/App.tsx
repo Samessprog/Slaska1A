@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./GeneralComponents/Navbar";
 import Footer from "./GeneralComponents/Footer";
 import Main from "./Pages/Mian";
 import Products from "./Pages/Products";
 import { Link, Route, Routes } from "react-router-dom";
+import { PropagateLoader } from "react-spinners";
 import "./i18n";
 
 function App() {
@@ -54,7 +55,18 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/Produkty/:id" element={<Products />} />
+        <Route
+          path="/Produkty/:id"
+          element={
+            <Suspense
+              fallback={
+                <div className="products-loader">{<PropagateLoader />}</div>
+              }
+            >
+              <Products />
+            </Suspense>
+          }
+        />
         <Route path="*" element={<Main />} />
       </Routes>
 
