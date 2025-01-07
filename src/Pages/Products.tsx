@@ -70,8 +70,9 @@ const Products = () => {
             <img
               alt="loading error"
               src={headerImg}
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full "
             />
+
             <span className="absolute product-header-text text-4xl text-white font-semibold">
               OFERTA PRODUKTÓW
             </span>
@@ -94,7 +95,7 @@ const Products = () => {
           <div
             className={`w-11/12 mt-10 ${
               productsDB && Object.keys(productsDB).length > 0
-                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 sm:gap-4 pl-2 pr-6"
+                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-1 sm:gap-4 pl-2 pr-6"
                 : "flex justify-center items-center"
             }`}
           >
