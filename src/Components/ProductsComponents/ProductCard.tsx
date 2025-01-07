@@ -1,5 +1,6 @@
-import React, { Suspense } from "react";
+import React, { useRef, useEffect, Suspense } from "react";
 import { PropagateLoader } from "react-spinners";
+import { createPortal } from "react-dom";
 
 const ProductCard = ({
   img,
@@ -8,28 +9,99 @@ const ProductCard = ({
   product_brand,
   product_name,
 }) => {
+  const imgRef = useRef(null);
+  const lensRef = useRef(null);
+  const resultRef = useRef(null);
+
+  useEffect(() => {
+    const img = imgRef.current;
+    const lens = lensRef.current;
+    const result = resultRef.current;
+
+    if (!img || !lens || !result) return;
+
+    // Calculate the ratio between result DIV and lens
+    const cx = (result.offsetWidth / lens.offsetWidth) * 0.6;
+    const cy = (result.offsetHeight / lens.offsetHeight) * 0.6;
+
+    // Set up the result background
+    result.style.backgroundImage = `url('${img.src}')`;
+    result.style.backgroundSize = `${img.width * cx}px ${img.height * cy}px`;
+
+    const moveLens = (e) => {
+      e.preventDefault();
+
+      const pos = getCursorPos(e);
+      let x = pos.x - lens.offsetWidth / 2;
+      let y = pos.y - lens.offsetHeight / 2;
+
+      // Keep the lens inside the image bounds
+      if (x > img.width - lens.offsetWidth) x = img.width - lens.offsetWidth;
+      if (x < 0) x = 0;
+      if (y > img.height - lens.offsetHeight)
+        y = img.height - lens.offsetHeight;
+      if (y < 0) y = 0;
+
+      lens.style.left = `${x}px`;
+      lens.style.top = `${y}px`;
+
+      // Adjust the zoomed image position
+      result.style.backgroundPosition = `-${x * cx}px -${y * cy}px`;
+    };
+
+    const getCursorPos = (e) => {
+      const rect = img.getBoundingClientRect();
+      const x = e.pageX - rect.left - window.pageXOffset;
+      const y = e.pageY - rect.top - window.pageYOffset;
+      return { x, y };
+    };
+
+    // Attach event listeners
+    lens.addEventListener("mousemove", moveLens);
+    img.addEventListener("mousemove", moveLens);
+    lens.addEventListener("touchmove", moveLens);
+    img.addEventListener("touchmove", moveLens);
+
+    return () => {
+      lens.removeEventListener("mousemove", moveLens);
+      img.removeEventListener("mousemove", moveLens);
+      lens.removeEventListener("touchmove", moveLens);
+      img.removeEventListener("touchmove", moveLens);
+    };
+  }, []);
+
   return (
-    <div className="shadow-card overflow-hidden">
-      <div className="product-card overflow-hidden">
-        <figure>
+    <div className="shadow-card overflow-hidde">
+      <div className="product-card overflow-hiden">
+        <figure className="img-zoom-container">
           <Suspense
             fallback={
               <div className="product-img-loader">{<PropagateLoader />}</div>
             }
           >
-            <img src={img} alt="loading err" />
+            <img
+              ref={imgRef}
+              src={img}
+              alt="loading err"
+              className="zoom-image w-full h-full"
+            />
           </Suspense>
+          <div ref={lensRef} className="img-zoom-lens"></div>
+
+          <div ref={resultRef} className="img-zoom-result"></div>
+          
 
           <figcaption className="text-justify product-desc pl-1 pr-1 pt-2 mb-2 overflow-y-scroll">
             <em className="font-semibold">{product_name}</em> -{" "}
-            {short_Description}
+            <span className="scroll-smooth">{short_Description}</span>
           </figcaption>
         </figure>
       </div>
-      <button className=" product-button pt-2 pb-2 w-full text-white">
+      <button className="product-button pt-2 pb-2 w-full text-white">
         Szczegóły
       </button>
     </div>
   );
 };
+
 export default ProductCard;

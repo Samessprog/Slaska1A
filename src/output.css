@@ -758,10 +758,6 @@ video {
   width: 100%;
 }
 
-.w-1\/12 {
-  width: 8.333333%;
-}
-
 .origin-top-right {
   transform-origin: top right;
 }
@@ -978,10 +974,6 @@ video {
 
 .text-start {
   text-align: start;
-}
-
-.font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 .text-2xl {
