@@ -1,13 +1,14 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
+import { useSpring, animated } from "@react-spring/web";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+//imports logos from assets
 import DPDLogo from "../../assets/deliveryIcons/DPD.webp";
 import pocztaLogo from "../../assets/deliveryIcons/poczta.webp";
 import allegroLogo from "../../assets/deliveryIcons/6lJEwSSohvBIIWNlJUU9sx-w1200-h1200.webp";
 import inpostLogo from "../../assets/deliveryIcons/Inpost.webp";
 import orlenLogo from "../../assets/deliveryIcons/Orlen.webp";
-import { useInView } from "react-intersection-observer";
-import { useSpring, animated } from "@react-spring/web";
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 
 const Delivery: React.FC = () => {
   const { t } = useTranslation();
@@ -41,7 +42,10 @@ const Delivery: React.FC = () => {
           <path d="M280-160q-50 0-85-35t-35-85H60l18-80h113q17-19 40-29.5t49-10.5q26 0 49 10.5t40 29.5h167l84-360H182l4-17q6-28 27.5-45.5T264-800h456l-37 160h117l120 160-40 200h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85H400q0 50-35 85t-85 35Zm357-280h193l4-21-74-99h-95l-28 120Zm-19-273 2-7-84 360 2-7 34-146 46-200ZM20-427l20-80h220l-20 80H20Zm80-146 20-80h260l-20 80H100Zm180 333q17 0 28.5-11.5T320-280q0-17-11.5-28.5T280-320q-17 0-28.5 11.5T240-280q0 17 11.5 28.5T280-240Zm400 0q17 0 28.5-11.5T720-280q0-17-11.5-28.5T680-320q-17 0-28.5 11.5T640-280q0 17 11.5 28.5T680-240Z" />
         </svg>
       </div>
-      <animated.div className=" place-items-center  mt-10 sm:grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 xl:grid-cols-5 gap-4 " style={props}>
+      <animated.div
+        className=" place-items-center  mt-10 sm:grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 xl:grid-cols-5 gap-4 "
+        style={props}
+      >
         <Link
           className="delivery-icon w-11/12  flex justify-center pb-5 pt-5 mb-5 sm:mb-0"
           to="https://www.dpd.com/pl/pl/"

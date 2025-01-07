@@ -1,15 +1,17 @@
 import React, { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
-import logoIcon from "../assets/logo.webp";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+//Redux imports
 import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../states/store";
 import {
   setIsOpen,
   setSelectedLanguage,
   setIsOpenHamburger,
   setIsClicked,
 } from "../states/navbarSlice";
-import { RootState } from "../states/store";
+//assets imports
+import logoIcon from "../assets/logo.webp";
 
 interface NavbarProps {
   currentWindowWith: number;

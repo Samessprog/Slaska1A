@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import BrandContext from "./BrandContext";
+//Imports assets
 import t from "../../assets/brandsLogos/0logo1 (1).webp";
 import domaxLogo from "../../assets/brandsLogos/mini_press_domax.webp";
 import klimas from "../../assets/brandsLogos/klimas.webp";

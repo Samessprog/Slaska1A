@@ -1,8 +1,11 @@
 import React, { lazy, Suspense } from "react";
+// Loader import
+import { PropagateLoader } from "react-spinners";
+//Translation imports
+import { useTranslation } from "react-i18next";
+//Assets  imports
 import AboutUS from "../Components/MainPageComponents/AboutUs";
 import Summary from "../Components/MainPageComponents/Summary";
-import { PropagateLoader } from "react-spinners";
-import { useTranslation } from "react-i18next";
 
 //Lazy imports
 const MainSlider = lazy(
