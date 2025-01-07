@@ -1,7 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import Rating from "@mui/material/Rating";
-import { useTranslation } from "react-i18next";
+
 interface Settings {
   dots: boolean;
   infinite: boolean;

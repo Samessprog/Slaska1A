@@ -1,6 +1,6 @@
 import React from "react";
-import ProductCard from "./ProductCard";
 import { useTranslation } from "react-i18next";
+import ProductCard from "./ProductCard";
 
 //products icons
 import KPRFAST from "../../assets/4ikonanew2.webp";

@@ -758,6 +758,10 @@ video {
   width: 100%;
 }
 
+.w-1\/12 {
+  width: 8.333333%;
+}
+
 .origin-top-right {
   transform-origin: top right;
 }

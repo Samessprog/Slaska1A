@@ -1,8 +1,8 @@
 import React from "react";
-import Chart from "react-apexcharts";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
+import Chart from "react-apexcharts";
 
 const BarChart: React.FC = () => {
   const { ref, inView } = useInView({

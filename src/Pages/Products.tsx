@@ -1,20 +1,22 @@
 import React, { useEffect, Suspense } from "react";
-import { database } from "../../firebase";
-import { ref, get, query, orderByChild, equalTo } from "firebase/database";
-import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
-import headerImg from "../assets/ProductsPage/0strona-merge.png";
-import ProductCard from "../Components/ProductsComponents/ProductCard";
+import { useParams } from "react-router";
+//Redux Imports
+import { RootState } from "../states/store";
 import { useDispatch, useSelector } from "react-redux";
 import { setProductsDB } from "../states/productSlice";
+//DataBase Imports
+import { database } from "../../firebase";
+import { ref, get, query, orderByChild, equalTo } from "firebase/database";
 import { PropagateLoader } from "react-spinners";
-import konfirmaty from "../assets/productIcons/LacznikiGwintowe.webp";
-import { RootState } from "../states/store";
+//Img from assets imports
+import headerImg from "../assets/ProductsPage/0strona-merge.png";
+import ProductCard from "../Components/ProductsComponents/ProductCard";
 
 const Products = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  let productsDB = useSelector(
+  const productsDB = useSelector(
     (state: RootState) => state.productStates.productsDB
   );
   const dispach = useDispatch();

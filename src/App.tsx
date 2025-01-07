@@ -6,6 +6,7 @@ import Main from "./Pages/Mian";
 import Products from "./Pages/Products";
 import { Link, Route, Routes } from "react-router-dom";
 import { PropagateLoader } from "react-spinners";
+import Summary from "./GeneralComponents/Summary";
 import "./i18n";
 
 function App() {
@@ -90,7 +91,7 @@ function App() {
           </svg>
         </Link>
       )}
-
+      <Summary />
       <Footer />
     </>
   );

@@ -1,9 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
+
+import SliderPhotos from "./sliderPhotos";
+//imports styles for slider
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SliderPhotos from "./sliderPhotos";
-
 
 //imports test
 import p1slideTest from "../../assets/mbank-slide — kopia.jpg";
