@@ -21,8 +21,8 @@ const ProductCard = ({
     if (!img || !lens || !result) return;
 
     // Calculate the ratio between result DIV and lens
-    const cx = (result.offsetWidth / lens.offsetWidth) * 0.6;
-    const cy = (result.offsetHeight / lens.offsetHeight) * 0.6;
+    const cx = (result.offsetWidth / lens.offsetWidth) * 0.9;
+    const cy = (result.offsetHeight / lens.offsetHeight) * 0.9;
 
     // Set up the result background
     result.style.backgroundImage = `url('${img.src}')`;
@@ -68,7 +68,7 @@ const ProductCard = ({
       lens.removeEventListener("touchmove", moveLens);
       img.removeEventListener("touchmove", moveLens);
     };
-  }, []);
+  });
 
   return (
     <div className="shadow-card overflow-hidde">
@@ -86,10 +86,10 @@ const ProductCard = ({
               className="zoom-image w-full h-full"
             />
           </Suspense>
+
           <div ref={lensRef} className="img-zoom-lens"></div>
 
           <div ref={resultRef} className="img-zoom-result"></div>
-          
 
           <figcaption className="text-justify product-desc pl-1 pr-1 pt-2 mb-2 overflow-y-scroll">
             <em className="font-semibold">{product_name}</em> -{" "}
