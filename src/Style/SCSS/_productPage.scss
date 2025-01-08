@@ -89,8 +89,8 @@
         visibility: hidden;
         position: absolute;
         border: 1px solid #d4d4d4;
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
         cursor: crosshair;
         z-index: 10;
         background-color: rgba(148, 148, 148, 0.242);
@@ -112,7 +112,6 @@
         background-size: contain;
         position: absolute;
         top: 0;
-        object-fit: cover;
         left: 105%;
         width: 300px;
         height: 300px;
