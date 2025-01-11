@@ -47,26 +47,54 @@ const ProductMain: React.FC = () => {
           <ProductCard id="Kolki" img={KPRFAST}>
             {t("productItem1")}
           </ProductCard>
-          <ProductCard img={MocowanieTradycyjneLogo}>
+          <ProductCard id="MocowanieTradycyjne" img={MocowanieTradycyjneLogo}>
             {t("productItem2")}
           </ProductCard>
-          <ProductCard img={MocowanieRamowe}>{t("productItem3")}</ProductCard>
-          <ProductCard img={MocowanieOscieznic}>
+          <ProductCard id="MocowanieRamowe" img={MocowanieRamowe}>
+            {t("productItem3")}
+          </ProductCard>
+          <ProductCard id="MocowanieOśnieżnic" img={MocowanieOscieznic}>
             {t("productItem4")}c
           </ProductCard>
-          <ProductCard img={DoDrewna}>{t("productItem5")}</ProductCard>
-          <ProductCard img={Kotwy}>{t("productItem6")}</ProductCard>
-          <ProductCard img={Gwozdzie}>{t("productItem7")}</ProductCard>
-          <ProductCard img={Samowierty}>{t("productItem8")}</ProductCard>
-          <ProductCard img={Dach}>{t("productItem9")}</ProductCard>
-          <ProductCard img={katowniki}>{t("productItem10")}</ProductCard>
-          <ProductCard img={Goliat}>{t("productItem11")}</ProductCard>
-          <ProductCard img={LacznikiGwintowe}>{t("productItem12")}</ProductCard>
-          <ProductCard img={Podkladki}>{t("productItem13")}</ProductCard>
-          <ProductCard img={Nakredki}>{t("productItem14")}</ProductCard>
-          <ProductCard img={Blistry}>{t("productItem15")}</ProductCard>
-          <ProductCard img={KotwyChemiczne}>{t("productItem16")}</ProductCard>
-          <ProductCard img={konfirmaty}>{t("productItem17")}</ProductCard>
+          <ProductCard id="WkretyDoDrewna" img={DoDrewna}>
+            {t("productItem5")}
+          </ProductCard>
+          <ProductCard id="Kotwy" img={Kotwy}>
+            {t("productItem6")}
+          </ProductCard>
+          <ProductCard id="Gwoździe" img={Gwozdzie}>
+            {t("productItem7")}
+          </ProductCard>
+          <ProductCard id="WkrętySamowiercące" img={Samowierty}>
+            {t("productItem8")}
+          </ProductCard>
+          <ProductCard id="WkrętyDoDachu" img={Dach}>
+            {t("productItem9")}
+          </ProductCard>
+          <ProductCard id="Kątowniki" img={katowniki}>
+            {t("productItem10")}
+          </ProductCard>
+          <ProductCard id="SystemGoliat" img={Goliat}>
+            {t("productItem11")}
+          </ProductCard>
+          <ProductCard id="ŁącznikiGwintowe" img={LacznikiGwintowe}>
+            {t("productItem12")}
+          </ProductCard>
+          <ProductCard id="Podkładki" img={Podkladki}>
+            {t("productItem13")}
+          </ProductCard>
+          <ProductCard id="Nakrędki" img={Nakredki}>
+            {t("productItem14")}
+          </ProductCard>
+          <ProductCard id="Blistry" img={Blistry}>
+            {t("productItem15")}
+          </ProductCard>
+          <ProductCard id="KotwyChemiczne" img={KotwyChemiczne}>
+            {t("productItem16")}
+          </ProductCard>
+          <ProductCard id="Konfirmaty" img={konfirmaty}>
+            {t("productItem17")}
+          </ProductCard>
         </div>
       </div>
     </section>

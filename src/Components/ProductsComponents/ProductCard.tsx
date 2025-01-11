@@ -1,8 +1,16 @@
-import React, { useRef, useEffect, Suspense } from "react";
+import React, { useRef, useEffect, Suspense, useState } from "react";
 import { PropagateLoader } from "react-spinners";
 import { createPortal } from "react-dom";
 
-const ProductCard = ({
+interface productCardInterface {
+  img: string;
+  short_Description: string;
+  product_type: string;
+  product_brand: string;
+  product_name: string;
+}
+
+const ProductCard: React.FC<productCardInterface> = ({
   img,
   short_Description,
   product_type,
@@ -13,6 +21,10 @@ const ProductCard = ({
   const lensRef = useRef(null);
   const resultRef = useRef(null);
 
+  const portalRoot = document.getElementById("portal-root");
+  if (portalRoot === null) return 0;
+  const [hovered, setHovered] = useState(false);
+
   useEffect(() => {
     const img = imgRef.current;
     const lens = lensRef.current;
@@ -20,11 +32,11 @@ const ProductCard = ({
 
     if (!img || !lens || !result) return;
 
-    // Calculate the ratio between result DIV and lens
+    // Ratio calculation
     const cx = (result.offsetWidth / lens.offsetWidth) * 0.9;
     const cy = (result.offsetHeight / lens.offsetHeight) * 0.9;
 
-    // Set up the result background
+    // Set result background
     result.style.backgroundImage = `url('${img.src}')`;
     result.style.backgroundSize = `${img.width * cx}px ${img.height * cy}px`;
 
@@ -35,7 +47,7 @@ const ProductCard = ({
       let x = pos.x - lens.offsetWidth / 2;
       let y = pos.y - lens.offsetHeight / 2;
 
-      // Keep the lens inside the image bounds
+      // Keep lens inside bounds
       if (x > img.width - lens.offsetWidth) x = img.width - lens.offsetWidth;
       if (x < 0) x = 0;
       if (y > img.height - lens.offsetHeight)
@@ -45,7 +57,6 @@ const ProductCard = ({
       lens.style.left = `${x}px`;
       lens.style.top = `${y}px`;
 
-      // Adjust the zoomed image position
       result.style.backgroundPosition = `-${x * cx}px -${y * cy}px`;
     };
 
@@ -56,7 +67,7 @@ const ProductCard = ({
       return { x, y };
     };
 
-    // Attach event listeners
+    // Event listeners
     lens.addEventListener("mousemove", moveLens);
     img.addEventListener("mousemove", moveLens);
     lens.addEventListener("touchmove", moveLens);
@@ -71,8 +82,8 @@ const ProductCard = ({
   });
 
   return (
-    <div className="shadow-card overflow-hidde">
-      <div className="product-card overflow-hiden">
+    <div className="shadow-card overflow-hidden">
+      <div className="product-card overflow-hidden">
         <figure className="img-zoom-container">
           <Suspense
             fallback={
@@ -87,9 +98,21 @@ const ProductCard = ({
             />
           </Suspense>
 
-          <div ref={lensRef} className="img-zoom-lens"></div>
-
-          <div ref={resultRef} className="img-zoom-result"></div>
+          <div
+            ref={lensRef}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            className="img-zoom-lens"
+          ></div>
+          {createPortal(
+            <div className={`portal-holder ${hovered ? "active" : "hide"}`}>
+              <div
+                ref={resultRef}
+                className={`img-zoom-result ${hovered ? "active" : "hide"}`}
+              ></div>
+            </div>,
+            portalRoot
+          )}
 
           <figcaption className="text-justify product-desc pl-1 pr-1 pt-2 mb-2 overflow-y-scroll">
             <em className="font-semibold">{product_name}</em> -{" "}

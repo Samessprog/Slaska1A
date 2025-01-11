@@ -14,6 +14,7 @@
     background-color: rgba(255, 255, 255, 0);
     border-radius: 10px 10px 10px 10px;
 
+
     &:hover {
         box-shadow: 4px 1px 8px 1px rgba(0, 0, 0, 0.55);
     }
@@ -75,11 +76,6 @@
     display: inline-block;
 
     &:hover {
-        .img-zoom-result {
-            z-index: 9999;
-            visibility: visible;
-        }
-
         .img-zoom-lens {
             visibility: visible;
         }
@@ -103,19 +99,69 @@
         height: auto;
     }
 
+    .portal-holder {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        .img-zoom-result {
+            background-color: white;
+            border-radius: 10px;
+
+            border: 1px solid #000000;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            left: 105%;
+            width: 300px;
+            height: 300px;
+            z-index: -999;
+        }
+    }
+
+
+}
+
+.portal-holder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+}
+
+
+.portal-holder {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    &.active {
+        visibility: visible;
+    }
+
+    &.hide {
+        visibility: hidden;
+    }
+
     .img-zoom-result {
         background-color: white;
         border-radius: 10px;
-        visibility: hidden;
         border: 1px solid #000000;
         background-repeat: no-repeat;
         background-size: contain;
-        position: absolute;
-        top: 0;
-        left: 105%;
-        width: 300px;
-        height: 300px;
-        z-index: -9999;
+        width: 500px;
+        height: 500px;
+
+        &.active {
+            visibility: visible;
+        }
+
+        &.hide {
+            visibility: hidden;
+        }
     }
 
 }
