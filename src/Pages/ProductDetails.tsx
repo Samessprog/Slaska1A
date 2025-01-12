@@ -4,6 +4,10 @@ import { database } from "../../firebase";
 import { ref, get, query, orderByChild, equalTo } from "firebase/database";
 
 const ProductDetails: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -24,7 +28,6 @@ const ProductDetails: React.FC = () => {
 
       try {
         const snapshot = await get(dataRef);
-        console.log(snapshot.val());
         setProductDetails(snapshot.val());
       } catch (error) {
         console.log(error);
@@ -55,8 +58,29 @@ const ProductDetails: React.FC = () => {
     } = product);
   });
 
-
-  return <div>hello</div>;
+  return (
+    <section className="pl-10 pr-10 flex justify-end">
+      <div className="flex justify-end mt-20 w-11/12">
+        <div className="w-6/12 flex text-justify flex-col">
+          <div className="mb-2 text-2xl font-semibold ">{Product_Name}</div>
+          <div className="w-12/12">{Product_Desc}</div>
+        </div>
+        <div className="w-6/12  flex justify-center">
+          <div className="mr-2 other-colors flex flex-col items-center">
+            <div>Kolor</div>
+            <div className="mt-2">
+              <div className="circle mb-2"></div>
+              <div className="circle mb-2"></div>
+              <div className="circle mv-2"></div>
+            </div>
+          </div>
+          <div className="w-7/12 img-details-product-holder">
+            <img alt="loading error w-full h-full" src={Product_Img} />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default ProductDetails;
