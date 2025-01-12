@@ -4,7 +4,7 @@ import Navbar from "./GeneralComponents/Navbar";
 import Footer from "./GeneralComponents/Footer";
 import Main from "./Pages/Mian";
 
-
+import ProductDetails from "./Pages/ProductDetails";
 import Products from "./Pages/Products";
 import { Link, Route, Routes } from "react-router-dom";
 import { PropagateLoader } from "react-spinners";
@@ -72,15 +72,14 @@ function App() {
           }
         />
         <Route
-          path="/Produkty/:id"
+          path="/DetaleProduktu/:id"
           element={
             <Suspense
               fallback={
                 <div className="products-loader">{<PropagateLoader />}</div>
               }
             >
-
-
+              <ProductDetails />
             </Suspense>
           }
         />

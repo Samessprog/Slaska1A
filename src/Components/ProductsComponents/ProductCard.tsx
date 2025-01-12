@@ -1,8 +1,10 @@
 import React, { useRef, useEffect, Suspense, useState } from "react";
 import { PropagateLoader } from "react-spinners";
 import { createPortal } from "react-dom";
+import { Link } from "react-router-dom";
 
 interface productCardInterface {
+  product_ID: number;
   img: string;
   short_Description: string;
   product_type: string;
@@ -11,6 +13,7 @@ interface productCardInterface {
 }
 
 const ProductCard: React.FC<productCardInterface> = ({
+  product_ID,
   img,
   short_Description,
   product_type,
@@ -120,9 +123,11 @@ const ProductCard: React.FC<productCardInterface> = ({
           </figcaption>
         </figure>
       </div>
-      <button className="product-button pt-2 pb-2 w-full text-white">
-        Szczegóły
-      </button>
+      <Link to={`/DetaleProduktu/${product_ID}`}>
+        <button className="product-button pt-2 pb-2 w-full text-white">
+          Szczegóły
+        </button>
+      </Link>
     </div>
   );
 };
