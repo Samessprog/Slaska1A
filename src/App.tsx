@@ -3,6 +3,8 @@ import "./App.css";
 import Navbar from "./GeneralComponents/Navbar";
 import Footer from "./GeneralComponents/Footer";
 import Main from "./Pages/Mian";
+
+
 import Products from "./Pages/Products";
 import { Link, Route, Routes } from "react-router-dom";
 import { PropagateLoader } from "react-spinners";
@@ -56,6 +58,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Main />} />
+
         <Route
           path="/Produkty/:id"
           element={
@@ -65,6 +68,19 @@ function App() {
               }
             >
               <Products />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/Produkty/:id"
+          element={
+            <Suspense
+              fallback={
+                <div className="products-loader">{<PropagateLoader />}</div>
+              }
+            >
+
+
             </Suspense>
           }
         />
