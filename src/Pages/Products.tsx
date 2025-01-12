@@ -103,9 +103,9 @@ const Products = () => {
               Object.entries(productsDB).map(([key, product]) => (
                 <ProductCard
                   key={key}
+                  product_ID={product.ID_Product}
                   short_Description={product.Short_Desc}
                   product_name={product.Product_Name}
-                  product_brand={product.Product_Brand}
                   product_type={product.Product_Type}
                   img={product.Product_Img}
                 />
